@@ -3,5 +3,16 @@ body {
 }
 
 .a-img-sm {
-  width: 30px;
+  height: 25px;
+
+}
+
+
+.a-menu-table td:nth-child(1) {
+  text-align: center;
+  width: 50px;
+}
+
+.a-menu-table td:nth-child(2) {
+  font-weight: bold;
 }
