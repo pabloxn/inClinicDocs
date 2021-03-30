@@ -3,26 +3,35 @@
 
 <head>
   <title>Page Title</title>
+
+  <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
-  The client view contains all the details for the client. It has two main areas:
+<body class='p-3'>
+  <p>The client view contains all the details for the client. It has two main areas:</p>
   <ol>
     <li>The navigation Sidebar</li>
     <li>The display area</li>
   </ol>
 
-  <h2>Navigation Bar</h2>
-  Side Menu
-  This is split (in order from top to bottom) into:
-
-  Navigation Buttons
+  <h2>Navigation Side Menu</h2>
   <table>
+    <tr>
+      <td><img src='assets/pages/client-card/image1.png' style='height:400px'></td>
+      <td class='p-5'>
+        <p>This is split (in order from top to bottom) into:</p>
+
+        <ul>
+          <li>Navigation Buttons</li>
+          <li>Action Buttons</li>
+          <li>Info</li>
+        </ul>
+      </td>
+    </tr>
   </table>
-  Action Buttons
-  Info
-  Menu Buttons
+
+  <h3>Menu Buttons</h3>
   <table class='a-menu-table'>
     <thead>
       <th>Icon</th>
@@ -72,10 +81,10 @@
   </table>
 
 
-  Action Buttons
-  In Order of Appearance theses are:
+  <h3>Action Buttons</h3>
+  <p>In Order of Appearance theses are:</p>
 
-  <table>
+  <table class='a-menu-table'>
     <tr>
       <th>Icon</th>
       <th>Label</th>
@@ -99,8 +108,8 @@
   </table>
 
 
-  Info
-  Shows the next appointment or whether they are on the waiting list.
+  <h3>Info</h3>
+  <p>Shows the next appointment or whether they are on the waiting list.</p>
 </body>
 
 </html>
