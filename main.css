@@ -16,3 +16,8 @@ body {
 .a-menu-table td:nth-child(2) {
   font-weight: bold;
 }
+
+.a-menu-table th {
+  background-color: #0078d4;
+  color: white;
+}
