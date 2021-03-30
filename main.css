@@ -62,7 +62,7 @@ ol {
 }
 
 .a-menu-table td:nth-child(1) {
-  text-align: center;
+  text-align: center !important;
   width: 50px;
 }
 
