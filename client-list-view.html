@@ -4,7 +4,7 @@
 <head>
     <title>Client Page View</title>
 
-    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2.0.3/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -13,14 +13,14 @@
 
     <p>The page is split into five areas:</p>
 
-    <ul>
+    <ol class='list-decimal ml-6'>
         <li>ToolBar</li>
         <li>Filter Bar</li>
         <li>Client Table Header</li>
         <li>Client List</li>
         <li>The Navigation Bar</li>
         <li>Toolbar</li>
-    </ul>
+    </ol>
     <h3>Toolbar</h3>
     <p>The toolbar has three buttons:</p>
     <table class='a-menu-table'>
@@ -55,24 +55,54 @@
 
     <h3>Filter Bar</h3>
     <p>This is a set predefined filters</p>
-    ‌ <p>This has one field to enter a text filter indicated by the <img src='assets/icons/search.svg'
+    <table class='a-menu-table'>
+        <thead>
+            <th>Icon</th>
+            <th>Label</th>
+            <th>Position</th>
+            <th>Purpose</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src='assets/icons/check.svg' class='a-img-sm ' /></td>
+                <td>Waiting</td>
+                <td>Left</td>
+                <td>Filters the clients to show those on the waiting list.</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/search.svg' class='a-img-sm ' /></td>
+                <td></td>
+                <td>Right</td>
+                <td>This text field will filter the clients by name and referance.</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- ‌ <p>This has one field to enter a text filter indicated by the <img src='assets/icons/search.svg'
             class='a-img-sm ' /> icon. This will filter the client’s
-        list by any text entered into this field. It also contains one button that toggles the waiting list filter.</p>
+        list by any text entered into this field. It also contains one button that toggles the waiting list filter.</p> -->
 
     <h3>Table Header</h3>
     <p>This contains the header information for the table. It has two features:</p>
-
-    <p>Sort: If you click on any of the headers it will sort to that field. If you click it again it will reverse the
-        sort
-        and clicking it again will remove the sort.</p>
-
-    <p>Filter: Each field is filterable by clicking on the ‘filter’ icon and a small pop-up will open giving you options
-        to
-        consider.</p>
-
+    <table>
+        <tbody>
+            <tr>
+                <td class='font-bold pr-6'>Sort</td>
+                <td>If you click on any of the headers it will sort to that field. If you click it again it will reverse
+                    the
+                    sort
+                    and clicking it again will remove the sort.</td>
+            </tr>
+            <tr>
+                <td class='font-bold pr-6'>Filter</td>
+                <td>Each field is filterable by clicking on the ‘filter’ icon and a small pop-up will open giving you
+                    options
+                    to
+                    consider.</td>
+            </tr>
+        </tbody>
+    </table>
     <h3>Table List</h3>
-    ‌ <p>This is the list of available clients. If you wish to open one click the line.
-    </p>
+    <p>This is the list of available clients. If you wish to open a client click the relevant line.</p>
     <h3>Navigation Bar</h3>
     <p>This show the numbers of records on the right and navigation buttons on the left.</p>
 </body>
