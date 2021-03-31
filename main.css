@@ -4,7 +4,7 @@ body {
 
 .a-img-sm {
   height: 25px;
-
+  display: inline !important;
 }
 
 h2 {

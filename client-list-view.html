@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Client Page View</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class='p-3'>
+    <img src='assets/pages/client-list/image1.png' style='height:800px'>
+
+    <p>The page is split into five areas:</p>
+
+    <ul>
+        <li>ToolBar</li>
+        <li>Filter Bar</li>
+        <li>Client Table Header</li>
+        <li>Client List</li>
+        <li>The Navigation Bar</li>
+        <li>Toolbar</li>
+    </ul>
+    <h3>Toolbar</h3>
+    <p>The toolbar has three buttons:</p>
+    <table class='a-menu-table'>
+        <thead>
+            <th>Icon</th>
+            <th>Label</th>
+            <th>Position</th>
+            <th>Purpose</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src='assets/icons/file-excel.svg' class='a-img-sm ' /></td>
+                <td>Export</td>
+                <td>Left</td>
+                <td>Export left This exports the client list to a pdf.</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/plus.svg' class='a-img-sm ' /></td>
+                <td>Add Wizard</td>
+                <td>Right</td>
+                <td>Add Wizard right This opens the add client wizard.</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/plus.svg' class='a-img-sm ' /></td>
+                <td>Add</td>
+                <td>Right</td>
+                <td>Add Wizard right This opens the add client wizard.</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h3>Filter Bar</h3>
+    <p>This is a set predefined filters</p>
+    ‌ <p>This has one field to enter a text filter indicated by the <img src='assets/icons/search.svg'
+            class='a-img-sm ' /> icon. This will filter the client’s
+        list by any text entered into this field. It also contains one button that toggles the waiting list filter.</p>
+
+    <h3>Table Header</h3>
+    <p>This contains the header information for the table. It has two features:</p>
+
+    <p>Sort: If you click on any of the headers it will sort to that field. If you click it again it will reverse the
+        sort
+        and clicking it again will remove the sort.</p>
+
+    <p>Filter: Each field is filterable by clicking on the ‘filter’ icon and a small pop-up will open giving you options
+        to
+        consider.</p>
+
+    <h3>Table List</h3>
+    ‌ <p>This is the list of available clients. If you wish to open one click the line.
+    </p>
+    <h3>Navigation Bar</h3>
+    <p>This show the numbers of records on the right and navigation buttons on the left.</p>
+</body>
+
+</html>
