@@ -17,6 +17,23 @@ body {
   display: inline !important;
 }
 
+h1 {
+  font-size: 30px;
+  font-weight: 300;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+h1:after {
+  content: ' ';
+  display: block;
+  margin-top: 3px;
+  border: 2px solid #e2e2e2;
+}
+
 h2 {
   font-size: 28px;
   font-weight: 300;
