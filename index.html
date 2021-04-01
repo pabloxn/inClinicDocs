@@ -6,6 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
     document.getElementsByTagName("html")[0].className += " js";
+
+    function go(loc) {
+      document.getElementById('calendar').src = loc;
+    }
+    window.onload = function () {
+      var showPage = getParameterByName("page");
+      if (showPage) {
+        go(showPage + '.html');
+      }
+    };
+
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css">
@@ -88,10 +105,6 @@
     }
     for (i = 0; i < list.length; i++) {
       list[i].addEventListener('click', accordion);
-    }
-
-    function go(loc) {
-      document.getElementById('calendar').src = loc;
     }
   </script>
 </body>
