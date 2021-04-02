@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Diary View</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class='p-3'>
+    <h1>Diary Page</h1>
+    <p>This is the area is to support the viewing, editing and deleting of appointments and the viewing of clinic days
+    </p>
+    <p>It contains three main sections</p>
+    <ul class='list-disc ml-5'>
+        <li><b>The toolbar</b> for the navigation of the schedular.</li>
+        <li><b>The Filter</b> decide which clinicians appointments/clinics are showing.</li>
+        <li><b>The schedular</b> for viewing and interaction of the appointments.</li>
+    </ul>
+    <h2>Toolbar</h2>
+    <img src='assets/pages/diary-card/image1.png'>
+    <p>This area has the navigation tools for the schedular and an actions button.</p>
+
+    <table class='a-menu-table'>
+        <thead>
+            <th>Number</th>
+            <th>Label</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>1</span></td>
+                <td>Today</td>
+                <td>This will jump the view to toadys date.</td>
+            </tr>
+            <tr>
+                <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>2</span></td>
+                <td>Nav Buttons</td>
+                <td>This will step date range <img src='assets/icons/chevron-right.svg' class='a-img-vsm' /> forward and
+                    <img src='assets/icons/chevron-left.svg' class='a-img-vsm' /> back depending on the selected view.
+                </td>
+            </tr>
+            <tr>
+                <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>3</span></td>
+                <td>Date Range</td>
+                <td>This show the visible date range and if clicked will show a calendar to enable the navigation to a
+                    particular date.</td>
+            </tr>
+            <tr>
+                <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>4</span></td>
+                <td>View</td>
+                <td>This show the current view and enables you to change it. The available options are: Day, Week,
+                    Month, and agenda.</td>
+            </tr>
+            <tr>
+                <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>5</span></td>
+                <td>Action</td>
+                <td>This is a drop down menu for selecting associated actions (See below)</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Actions</h3>
+    <p>The available actions are:</p>
+    <table class='a-menu-table'>
+        <thead>
+            <th>Icon</th>
+            <th>Label</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src='assets/icons/file-alt.svg' class='a-img-sm' /></td>
+                <td>Create Clinic Sheet</td>
+                <td><b>[Only available in Day View]</b> When a clinic day is selected you can print out the run sheet
+                    for the clinic.</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/plus.svg' class='a-img-sm' /></td>
+                <td>Add Appointment</td>
+                <td>Open a dialog to create a new appointment.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>The Filter</h2>
+    <p>The filter selection sets which clinicians appointments are showing.</p>
+    <h2>The Schedular</h2>
+    <img src='assets/pages/diary-card/image2.png'>
+
+    <p>Each clinic day is shown by the clinic name appearing in the all day section of the schedular. (See <span
+            class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>1</span>)</p>
+    <p>below that is the various slots of each clinic. The slot types are:</p>
+
+    <table class='a-menu-table'>
+        <thead>
+            <th>Number</th>
+            <th>Type</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>2</span></td>
+                <td>Empty Slot</td>
+                <td>This is an empty slot in the clinic where an appointment can be placed.</td>
+            </tr>
+            <tr>
+                <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>3</span></td>
+                <td>Unconfirmed Appointment</td>
+                <td>Show an appoinment that has not been confirmed.</td>
+            </tr>
+            <tr>
+                <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>4</span></td>
+                <td>Confirmed Appointment</td>
+                <td>Show a confirmed appoinment.</td>
+            </tr>
+            <tr>
+                <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>5</span></td>
+                <td>Break</td>
+                <td>Show a designated break in the clinic. (Non-bookable)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>You can interact with slots <span
+            class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>2</span> - <span
+            class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>4</span> by clicking on them.
+        When you click on an empty slot then an add Appointment dialog will appear. When you click on an appoinment then
+        the appointment overview dialog will appear.</p>
+
+    <h2>Walkthrough</h2>
+    <iframe src="https://player.vimeo.com/video/425158201" width="640" height="360" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+</body>
+
+</html>

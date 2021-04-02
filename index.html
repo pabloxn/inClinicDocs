@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <div style='display:flex'>
+  <div style='display:flex;'>
     <section style='width:200px; background-color: white;overflow: scroll;'>
       <img src='./assets/img/inclinic-logo.png' height='50'>
       <ul class="menu">
@@ -45,9 +45,9 @@
         </li>
         <li class="list"><a href="#">Diary</a>
           <ul class="items">
-            <li> <a href="#"> Overview</a></li>
-            <li> <a href="#"> Diary Page</a></li>
-            <li> <a href="#"> How To... </a></li>
+            <li> <a onclick="go('./diary-overview.html')"> Overview</a></li>
+            <li> <a onclick="go('./diary-card-view.html')"> Diary Page</a></li>
+            <li> <a onclick="go('#')"> How To... </a></li>
           </ul>
         </li>
         <li class="list"><a href="#">Clients</a>
