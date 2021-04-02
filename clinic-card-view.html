@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Clinic Appointment Card View</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class='p-3'>
+    <h1>Clinic Appointment Page</h1>
+    <p>This is the area is to support the clinician during the appointment. It contains a header section and a tabs
+        section.
+    </p>
+    <h2>Header</h2>
+    <img src='assets/pages/clinic-card/image1.png'>
+    <p>This area has basic information and available actions.</p>
+
+    <p>information is:</p>
+
+    <ul class='list-disc ml-5'>
+        <li>On the top of the section is the progress showing how many you have seen or did not attend over how many are
+            in the
+            clinic (e.g. 1/3 Complete).</li>
+        <li>Then on the row down is the clients name on the left and the appointment slot is on the left (e.g. 09:15 -
+            10:00)</li>
+    </ul>
+    <p>The actions are:</p>
+
+    <table class='a-menu-table'>
+        <thead>
+            <th>Icon</th>
+            <th>Label</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src='assets/icons/clock.svg' class='a-img-sm' /></td>
+                <td>Set Status</td>
+                <td>This is the most important action on this screen. When set it triggers the systems to perform
+                    additional activities that help admin. The statuses are:
+                    Attended,
+                    Arrived, Did not attend, Cancelled. Next to this is the progress text.</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/clipboard-check.svg' class='a-img-sm' /></td>
+                <td>List</td>
+                <td>Displays the clinic day appointments so you can select another client.</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/user.svg' class='a-img-sm' /></td>
+                <td>Next</td>
+                <td>Opens the next clients appointment.</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/play.svg' class='a-img-sm' /></td>
+                <td>Timer</td>
+                <td>This is a timer to show how long you have been in the session.</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <h2>The Tabs</h2>
+
+    <p>This area has several tabs which cover different areas. Below is a description of each area:</p>
+    <table class='a-menu-table'>
+        <thead>
+            <th>Icon</th>
+            <th>Label</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src='assets/icons/info.svg' class='a-img-sm' /></td>
+                <td>Overview</td>
+                <td>Gives a brief set of information about the client, the case and the incident.
+                </td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/comment-alt-lines.svg' class='a-img-sm' /></td>
+                <td>Comments</td>
+                <td>comments (These are for the administration, not clinical notes).</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/clipboard.svg' class='a-img-sm' /></td>
+                <td>Process Notes</td>
+                <td>This is where you would register the clinical notes</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/folder.svg' class='a-img-sm' /></td>
+                <td>Documents</td>
+                <td>You can upload case documents here. (e.g. handwritten notes scanned in session)</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/clipboard.svg' class='a-img-sm' /></td>
+                <td>Timeline</td>
+                <td>Shows the client's timeline (see Case timeline)</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/user.svg' class='a-img-sm' /></td>
+                <td>Client</td>
+                <td>This is the client details page.</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/file-invoice-dollar.svg' class='a-img-sm' /></td>
+                <td>Charges</td>
+                <td>Shows the charges related to this appointment</td>
+            </tr>
+        </tbody>
+    </table>
+
+    ‌<h2>Activating the task templates</h2>
+    <div class="flex a-border-warn pt-3 pb-3 mt-3 mb-3">
+        <div class="flex-none w-14 text-center">
+            <img src='assets/icons/exclamation-triangle.svg' class='a-img-sm' />
+        </div>
+        <div class="flex-grow">
+            It is important to set the status of the Appointment.
+        </div>
+    </div>
+    <p>
+        It is important to set status it is a key component to supporting the admin staff.
+        When the clinician sets appointment status to 'Attended' then the user will be asked if they want to activate
+        the associated task template. If the user responds in the affirmative then they will be activated.
+    </p>
+
+    <p>
+        If the clinician then changes their mind and changes the status back then the created tasks will beremoved.
+    </p>
+
+    <p>
+        If the clinician set the attendance status to 'Did not Attend' (DNA) then then DNA task template will initiated.
+        The default template for the DNA task template is set in general settings.
+    </p>
+
+    <h2>How to use</h2>
+    <iframe src="https://player.vimeo.com/video/396265849" width="640" height="360" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+</body>
+
+</html>

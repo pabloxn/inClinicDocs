@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Clinic Appointment List View</title>
+
+  <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class='p-3'>
+  <h1>Clinic Appointment List</h1>
+  <p>This is where you see your clients for the clinic you are running that day.</p>
+
+  <div class="h-400 flex">
+    <img src='assets/pages/clinic-list/image1.png' style='height:400px'>
+    <div class='p-5 flex-auto '>
+      <p>This consists of two main areas:</p>
+
+      <ul class='list-disc ml-5'>
+        <li>The top section is for selecting the venue and date but really should only be needed
+          when viewing clinics in
+          the future. If you are selecting the clinic date then the dates with clinics set have a small blue dot under
+          them.</li>
+        <li>The bottom section has a header which shows the progress through the clients and below
+          that is the list of
+          clients that are to attend the clinic. The icon next to each client signifies the status of the appointment
+          and the appointment status can be set by clicking on the icon (see appointment details). The icons definitions
+          are below (hovering the mouse pointer over the icon will reveal the status too):</li>
+      </ul>
+    </div>
+  </div>
+  <h3>Appointment Statuses</h3>
+  <table class='a-menu-table'>
+    <thead>
+      <th>Icon</th>
+      <th>Label</th>
+      <th>Description</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src='assets/icons/question.svg' class='a-img-sm' /></td>
+        <td>Awaiting</td>
+        <td>This is the appointments initial status</td>
+      </tr>
+      <tr>
+        <td><img src='assets/icons/clipboard-check.svg' class='a-img-sm' /></td>
+        <td>Arrived</td>
+        <td>This is an optional status and only applies if you are using a front desk to register that someone has
+          arrived at the premises.</td>
+      </tr>
+      <tr>
+        <td><img src='assets/icons/times.svg' class='a-img-sm' /></td>
+        <td>Did Not Attend/Cancelled</td>
+        <td>The client did not attend or the appointment was cancelled at the last minute.</td>
+      </tr>
+      <tr>
+        <td><img src='assets/icons/check.svg' class='a-img-sm' /></td>
+        <td>Attended</td>
+        <td>The client attended the appointment.</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</body>
+
+</html>
