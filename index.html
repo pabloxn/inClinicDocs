@@ -11,9 +11,15 @@
       document.getElementById('calendar').src = loc;
     }
     window.onload = function () {
-      var showPage = getParameterByName("page");
+      var page = getParameterByName("page");
+      var subpage = getParameterByName("subpage");
       if (showPage) {
-        go(showPage + '.html');
+        if (subpage) {
+          go(showPage + '.html#' + subpage);
+        } else {
+          go(showPage + '.html');
+        }
+
       }
     };
 
@@ -24,6 +30,7 @@
       return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
   </script>
+  <link href="https://unpkg.com/tailwindcss@^2.0.3/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/menu.css">
@@ -31,85 +38,24 @@
 </head>
 
 <body>
-  <div style='display:flex;'>
-    <section style='width:200px; background-color: white;overflow: scroll;'>
-      <img src='./assets/img/inclinic-logo.png' height='50'>
-      <ul class="menu">
-        <li class="list"><a href="#">Clinic </a>
-          <ul class="items">
-            <li><a onclick="go('./clinic-overview.html')"> Overview</a></li>
-            <li><a onclick="go('./clinic-list-view.html')"> Clinic List</a></li>
-            <li><a onclick="go('./clinic-card-view.html')"> Session Card</a></li>
-            <li><a onclick="go('./clinic-how-to.html')"> How To...</a></li>
-          </ul>
-        </li>
-        <li class="list"><a href="#">Diary</a>
-          <ul class="items">
-            <li> <a onclick="go('./diary-overview.html')"> Overview</a></li>
-            <li> <a onclick="go('./diary-card-view.html')"> Diary Page</a></li>
-            <li> <a onclick="go('./diary-how-to.html')"> How To... </a></li>
-          </ul>
-        </li>
-        <li class="list"><a href="#">Clients</a>
-          <ul class="items">
-            <li> <a onclick="go('./client-overview.html')"> Overview </a></li>
-            <li> <a onclick="go('./client-list-view.html')"> List </a></li>
-            <li> <a onclick="go('./client-card-view.html')"> Card </a></li>
-            <li> <a onclick="go('./client-how-to.html')"> How To... </a></li>
-          </ul>
-        </li>
-
-        <li class="list"><a href="#">List 4</a>
-          <ul class="items">
-            <li> <a href="#"> Item 4-1 </a></li>
-            <li> <a href="#"> Item 4-2 </a></li>
-            <li class="list"><a href="#">List 4-1</a>
-              <ul class="items">
-                <li> <a href="#"> Item 4-1-1</a></li>
-                <li> <a href="#"> Item 4-1-2</a></li>
-                <li class="list"><a href="#">List 4-2</a>
-                  <ul class="items">
-                    <li> <a href="#"> Item 4-2-1</a></li>
-                    <li> <a href="#"> Item 4-2-2</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-    <section style="flex:1;height:1vh;position: relative;
-    padding-bottom: 75%;
-    overflow: hidden;">
-      <iframe id="calendar" src="about:blank" style="position: absolute;
-      top:0;
-      left: 0;
+  <nav class="sticky top-0 z-40 lg:z-50 w-full max-w-8xl mx-auto bg-gray-100 flex-none flex p-3">
+    <img src='./assets/img/inclinic-logo.png' style='height:50px;' class='pr-5'>
+    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
+      onclick="go('./clinic.html')">
+      CLINIC</a>
+    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
+      onclick="go('./diary.html')">
+      DIARY</a>
+    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
+      onclick="go('./client.html')">
+      CLIENTS</a>
+  </nav>
+  <section class='bg-white lg:flex '>
+    <iframe id="calendar" src="about:blank" class='bg-white' style="position: absolute;
+     
       width: 100%;
       height: 100%;" frameborder="0"></iframe>
-    </section>
-  </div>
-
-  <script>
-    const list = document.querySelectorAll('.list');
-
-    function accordion(e) {
-      e.stopPropagation();
-      if (this.classList.contains('active')) {
-        this.classList.remove('active');
-      } else if (this.parentElement.parentElement.classList.contains('active')) {
-        this.classList.add('active');
-      } else {
-        for (i = 0; i < list.length; i++) {
-          list[i].classList.remove('active');
-        }
-        this.classList.add('active');
-      }
-    }
-    for (i = 0; i < list.length; i++) {
-      list[i].addEventListener('click', accordion);
-    }
-  </script>
+  </section>
 </body>
 
 </html>

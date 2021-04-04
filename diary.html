@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Diary</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+</head>
+
+<body class='p-3'>
+    <nav class="toc-left relative z-1 transition--300 absolute pa4 pt-6 is-position-fixed">
+        <h1 class='mt-0'>Diary</h1>
+        <div class='toc js-toc'></div>
+    </nav>
+    <div class="content js-toc-content pa4 pt-0 ml-80">
+        <h1 id="overview" class='mt-3'>Overview</h1>
+        <p>The diary enables the user to view, edit, delete and confirm appointments. There are various views for the
+            appointments including day, week, month and agenda. </p>
+        <p>There is also the ability to print each clinic sheet.</p>
+        <h1 id='page'>Page</h1>
+        <p>This is the area is to support the viewing, editing and deleting of appointments and the viewing of clinic
+            days
+        </p>
+        <p>It contains three main sections</p>
+        <ul class='list-disc ml-5'>
+            <li><b>The toolbar</b> for the navigation of the schedular.</li>
+            <li><b>The Filter</b> decide which clinicians appointments/clinics are showing.</li>
+            <li><b>The schedular</b> for viewing and interaction of the appointments.</li>
+        </ul>
+        <h2 id='ptb'>Toolbar</h2>
+        <img src='assets/pages/diary-card/image1.png'>
+        <p>This area has the navigation tools for the schedular and an actions button.</p>
+
+        <table class='a-menu-table'>
+            <thead>
+                <th>Number</th>
+                <th>Label</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>1</span></td>
+                    <td>Today</td>
+                    <td>This will jump the view to toadys date.</td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>2</span></td>
+                    <td>Nav Buttons</td>
+                    <td>This will step date range <img src='assets/icons/chevron-right.svg' class='a-img-vsm' /> forward
+                        and
+                        <img src='assets/icons/chevron-left.svg' class='a-img-vsm' /> back depending on the selected
+                        view.
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>3</span></td>
+                    <td>Date Range</td>
+                    <td>This show the visible date range and if clicked will show a calendar to enable the navigation to
+                        a
+                        particular date.</td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>4</span></td>
+                    <td>View</td>
+                    <td>This show the current view and enables you to change it. The available options are: Day, Week,
+                        Month, and agenda.</td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>5</span></td>
+                    <td>Action</td>
+                    <td>This is a drop down menu for selecting associated actions (See below)</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id='ptba'>Actions</h3>
+        <p>The available actions are:</p>
+        <table class='a-menu-table'>
+            <thead>
+                <th>Icon</th>
+                <th>Label</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src='assets/icons/file-alt.svg' class='a-img-sm' /></td>
+                    <td>Create Clinic Sheet</td>
+                    <td><b>[Only available in Day View]</b> When a clinic day is selected you can print out the run
+                        sheet
+                        for the clinic.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/plus.svg' class='a-img-sm' /></td>
+                    <td>Add Appointment</td>
+                    <td>Open a dialog to create a new appointment.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id='pf'>The Filter</h2>
+        <p>The filter selection sets which clinicians appointments are showing.</p>
+        <h2 id='ps'>The Schedular</h2>
+        <img src='assets/pages/diary-card/image2.png'>
+
+        <p>Each clinic day is shown by the clinic name appearing in the all day section of the schedular. (See <span
+                class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>1</span>)</p>
+        <p>below that is the various slots of each clinic. The slot types are:</p>
+
+        <table class='a-menu-table'>
+            <thead>
+                <th>Number</th>
+                <th>Type</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>2</span></td>
+                    <td>Empty Slot</td>
+                    <td>This is an empty slot in the clinic where an appointment can be placed.</td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>3</span></td>
+                    <td>Unconfirmed Appointment</td>
+                    <td>Show an appoinment that has not been confirmed.</td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>4</span></td>
+                    <td>Confirmed Appointment</td>
+                    <td>Show a confirmed appoinment.</td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>5</span></td>
+                    <td>Break</td>
+                    <td>Show a designated break in the clinic. (Non-bookable)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You can interact with slots <span
+                class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>1</span> - <span
+                class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>4</span> by clicking on them.
+            When you click on an empty slot then an add Appointment dialog will appear. When you click on an appoinment
+            then
+            the appointment overview dialog will appear and finally when you click on a clinic a menu will appear
+            offering you the option to jump to the clinic day editor.</p>
+
+        <h2 id='pw'>Walkthrough</h2>
+        <iframe src="https://player.vimeo.com/video/425158201" width="640" height="360" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+        <h1 id='ht'>How to..</h1>
+
+        <h2 id='ht1'>Add an Appointment</h2>
+        <p>There are a few methods of adding a new appointment:</p>
+
+        <ul class='mb-6'>
+            <li>Via the client wizard (See Client Add Wizard). This is completely dealt with on the Add Wizard page and
+                is
+                not covered here.</li>
+            <li>Via the schedular (See Diary)</li>
+            <li>Via the client diary (See Client Diary)</li>
+        </ul>
+
+        <ol class='list-decimal ml-6'>
+            <li>Click on the <span class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img
+                        src='assets/icons/plus.svg' class='a-img-vsm' /> Add</span> button in client diary or in the
+                main
+                diary either click on an appointment labelled
+                'Empty
+                Slot' or select <span class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img
+                        src='assets/icons/plus.svg' class='a-img-vsm' /> Add Appointment</span> from the action menu on
+                the
+                toolbar.</li>
+
+            <li>
+                A dialog will open. If the appointment was selected by using the client diary then the client details
+                will
+                be filled
+                in and if from the 'Empty Slot' then fill in clinic information.
+            </li>
+
+            <li>
+                <b>[Required]</b> The first field is 'client' and is selectable from a drop down list. The list will be
+                filtered if the
+                dialog was selected from the 'Empty Slot' by using the clinic venue. It is important to note that the
+                client
+                has a
+                default venue and clinician set up and these will automatically fill in the next 2 fields.
+            </li>
+
+            <li><b>[Required]</b> This next field is the venue and defines where the appointment will take place.</li>
+
+            <li><b>[Required]</b> Then is the Clinician field and this defines which the clinician the client will see.
+            </li>
+
+            <li>
+                <b>[Required]</b> The Case field will automatically fill in if the client has only one case, otherwise
+                you
+                can select from
+                the drop down list.
+            </li>
+
+            <li>
+                <b>[Required]</b> The Appointment Type is selectable from a drop down list. The appointment type defines
+                many features of
+                the appointment. (See Appointment Type). When you select this it will define some information in the
+                appointment.
+                (Such as what happens when the appointment is attended). It will also set the appointment duration and
+                the
+                charges
+                assigned to the appointment.
+            </li>
+
+            <li>Duration (min) sets the length of the appointment. So automatically setting the end time.</li>
+
+            <li>Confirmed sets whether the client has confirmed that they will attend.</li>
+
+            <li>Date sets the appointment dates by clicking the required available clinic date (see above)</li>
+
+            <li>
+                The Time dropdown enables the selection of the time slot. The time slots are set by the durations and
+                the
+                available
+                time. They also give freedom to overlap with breaks or day end. If you don't want to use the defined
+                slots
+                then
+                untick Snap To to change the slots to be 5 minutes apart, it will still prevent the use of already taken
+                space but
+                gives more freedom. The information panel shows you the selected appointment and whether or not it
+                overlaps
+                with a
+                break or the end of a day.
+            </li>
+
+            <li>
+                The final area Charges are for adding charges to the appointment. It will be automatically be updated
+                from
+                the
+                appointment type, however you can add additional charges.
+            </li>
+
+            <li>Click <span class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img
+                        src='assets/icons/check.svg' class='a-img-vsm' /> Save</span> to save appointment or <span
+                    class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img src='assets/icons/times.svg'
+                        class='a-img-vsm' /> Cancel</span> to exit without saving.</li>
+        </ol>
+
+        <h2 id='ht2'>Edit an Appointment</h2>
+
+        <p>There are a few methods to edit an appointment:</p>
+
+        <ul>
+            <li>Via the schedular (See Diary)</li>
+            <li>Via the client diary (See Client Diary) </li>
+        </ul>
+
+        <ol class='list-decimal ml-6 mt-6'>
+            <li>
+                In the clients diary click on the ellipses at the end of the relevant entry and click the edit button or
+                in
+                the
+                main
+                diary either click on an active appointment and then from the appointment view click the 'pen'. For the
+                fields description see above.
+            </li>
+        </ol>
+
+        <h2 id='ht3'>View an Appointment</h2>
+        <ol class='list-decimal ml-6'>
+            <li>Click on an appointment in the diary view to view appointment details.</li>
+        </ol>
+        <div class="h-400 flex mt-6">
+            <img src='assets/pages/diary-how-to/image1.png' style='height:400px' class='p-5 flex-auto'>
+            <div class='p-5 flex-auto'>
+                <span class='mb-6'>There are three sections in the view appointment:</span>
+
+
+                <h3 id='ht31'>Actions Toolbar <span
+                        class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white text-base mb-0.5'>1</span>
+                </h3>
+                <table class='a-menu-table'>
+                    <thead>
+                        <th>Icon</th>
+                        <th>Label</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src='assets/icons/square.svg' class='a-img-sm' /></td>
+                            <td>Confirm/ Un-confirm appointment</td>
+                            <td>You can confirm or un-confirm an appointment by clicking here</td>
+                        </tr>
+                        <tr>
+                            <td><img src='assets/icons/trash.svg' class='a-img-sm' /></td>
+                            <td>Delete</td>
+                            <td>Delete the appointment.</td>
+                        <tr>
+                            <td><img src='assets/icons/pen.svg' class='a-img-sm' /></td>
+                            <td>Edit</td>
+                            <td>Edit the appointment.</td>
+                        </tr>
+                        <tr>
+                            <td><img src='assets/icons/times.svg' class='a-img-sm' /></td>
+                            <td>Close</td>
+                            <td>Close the dialog</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 id='ht32'>Header <span
+                        class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white text-base mb-0.5'>2</span>
+                </h3>
+                <p>The title of the appointment.</p>
+
+                <h3 id='ht33'>Information</h3>
+                <table class='a-menu-table'>
+                    <thead>
+                        <th>Number</th>
+                        <th>Icon</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span
+                                    class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>3</span>
+                            </td>
+                            <td><img src='assets/icons/clock.svg' class='a-img-sm' /></td>
+                            <td>The date and time of the appointment.</td>
+                        </tr>
+                        <tr>
+                            <td><span
+                                    class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>4</span>
+                            </td>
+                            <td><img src='assets/icons/map-marked-alt.svg' class='a-img-sm' /></td>
+                            <td>The appointment Venue</td>
+                        <tr>
+                            <td><span
+                                    class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>5</span>
+                            </td>
+                            <td><img src='assets/icons/users.svg' class='a-img-sm' /></td>
+                            <td>Attendees - It shows the practitioner and client. The client has an arrow next to jump
+                                to
+                                the client's
+                                details.</td>
+                        </tr>
+                        <tr>
+                            <td><span
+                                    class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>6</span>
+                            </td>
+                            <td><img src='assets/icons/square.svg' class='a-img-sm' /></td>
+                            <td>The confirmed status of the appointment: Unconfirmed Confirmed</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+            tocSelector: '.js-toc',
+            contentSelector: '.js-toc-content',
+            headingSelector: 'h1, h2, h3',
+            hasInnerContainers: true,
+        });
+    </script>
+</body>
+
+</html>
