@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Venue</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+</head>
+
+<body class='p-3'>
+    <nav class="toc-left relative z-1 transition--300 absolute pa4 pt-6 is-position-fixed">
+        <h1 class='mt-0'>Venues</h1>
+        <div class='toc js-toc'></div>
+    </nav>
+    <div class="content js-toc-content pa4 pt-0 ml-80">
+
+        <h1 id="overview" class='mt-3'>Overview</h1>
+        <p>This section covers the creation and editing of venues. It also covers the creation of clinics which is the
+            combination of a venue, a clinician and a date which is refered to as a clinic day.</p>
+        <p>The areas we will cover are:</p>
+        <ol class='pt-2 ml-6'>
+            <li><b>The venues list</b>, which enables the selection or
+                creation of a venue.
+            </li>
+            <li><b>The venue details</b>, which enables you
+            <li><b>The clinic days</b>, which enables you
+                create/edit a clinic.</li>
+        </ol>
+        <h1 id="list">List View</h1>
+        <p>The page shows the list of venues in the system. It can be filtered and sorted by using the column headers
+            . </p>
+        <img src='assets/pages/venues/image1.png' style='height:800px'>
+        <p>It contains three main sections</p>
+        <ul class='list-disc ml-5'>
+            <li><b>The toolbar</b> for the navigation of the schedular.</li>
+            <li><b>The Filter</b> decide which clinicians appointments/clinics are showing.</li>
+            <li><b>The Venues</b> for viewing and interaction of the appointments.</li>
+        </ul>
+        <h2 id='listtb'>Toolbar</h2>
+        <p>The toolbar has two buttons:</p>
+        <table class='a-menu-table'>
+            <thead>
+                <th>Icon</th>
+                <th>Label</th>
+                <th>Position</th>
+                <th>Purpose</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src='assets/icons/analytics.svg' class='a-img-sm ' /></td>
+                    <td>Stats</td>
+                    <td>Left</td>
+                    <td>To view venue stats</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/plus.svg' class='a-img-sm ' /></td>
+                    <td>Add</td>
+                    <td>Right</td>
+                    <td>This opens the add venue page.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id='listf'>Filters</h2>
+        <p>The filter row has two sections. On the left side is the <b>'Hide Inactive'</b> switch which hides inactive
+            venues. On the right hand side is the filter and filters by venue name. </p>
+        <h2 id='listv'>Venues</h2>
+        <div class="h-400 flex">
+            <img src='assets/pages/venues/image2.png' style='height:400px'>
+            <table class='a-menu-table ml-5 flex-auto '>
+                <thead>
+                    <th>Number</th>
+                    <th>Label</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>1</span>
+                        </td>
+                        <td>Map</td>
+                        <td>This is a map view of the location of the venue.</td>
+                    </tr>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>2</span>
+                        </td>
+                        <td>Venue Name</td>
+                        <td>The venues name </td>
+                    </tr>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>3</span>
+                        </td>
+                        <td>Address</td>
+                        <td>The venues address</td>
+                    </tr>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>4</span>
+                        </td>
+                        <td>Venue Standard Hours</td>
+                        <td>The venues standard hours</td>
+                    </tr>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>5</span>
+                        </td>
+                        <td>Days</td>
+                        <td><img src='assets/icons/calendar-day.svg' class='a-img-vsm' /> DAY - An action to enable
+                            editing and creation of clinic days.
+                    </tr>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>6</span>
+                        </td>
+                        <td>Edit</td>
+                        <td><img src='assets/icons/pen.svg' class='a-img-vsm' /> EDIT - An action to allow the editing
+                            of venues.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h1 id='hwt'>How to..</h1>
+        <h2 id='hwt1'>Add a Venue</h2>
+        <ol class='list-decimal ml-6'>
+            <li>In the Venue List view click the <span
+                    class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/plus.svg' class='pb-1 a-img-vsm text-white'
+                        style='filter: invert(100%) sepia(51%) saturate(1176%) hue-rotate(272deg) brightness(129%) contrast(93%);' />
+                    Add</span> button</li>
+            <li><b>[Required]</b> Enter the Venue Name.</li>
+            <li> Click colour dropdown and choose a colour for the venue.</li>
+            <li> The switch defines whether the venue is active or not (.i.e., It available for use in the system - if
+                inactive it won't be visible to use except in the venue list)</li>
+            <li> Enter an address for the venue.</li>
+            <li> Click on the <img src='assets/icons/clock.svg' class='a-img-vsm' /> Hours tab to switch to the default
+                hours for venue. This pre-populates the clinic day entries.</li>
+            <li> Edit this if required.</li>
+            <li> Click on the <img src='assets/icons/phone.svg' class='a-img-vsm' /> Directory tab to switch to the
+                default directort for venue.</li>
+            <li> Edit this if required.</li>
+            <li> Click on the <img src='assets/icons/folder.svg' class='a-img-vsm' /> Documents tab to switch to the
+                default documents for venue. The documents here can be used to attach to emails.</li>
+            <li> Edit this if required.</li>
+            <li>Click on the <span class='rounded-lg bg-gray-200 border-2 border-gray-200 p-0.5'><img
+                        src='assets/icons/folder.svg' class='pb-1 a-img-vsm' /> SAVE</span> button when you are ready.
+            </li>
+        </ol>
+        <h2 id='hwt2'>Edit a Venue</h2>
+        <ol class='list-decimal ml-6'>
+            <li>In the Venue List view click the <span
+                    class='rounded-lg bg-gray-200 border-2 border-gray-200 p-0.5'><img src='assets/icons/pen.svg'
+                        class='a-img-vsm pb-1' /> Edit</span> button at the bottom of the desired venue card.</li>
+            <li>See above for fields information.</li>
+            <li>Click on the <span class='rounded-lg bg-gray-200 border-2 border-gray-200 p-0.5'><img
+                        src='assets/icons/folder.svg' class='pb-1 a-img-vsm' /> SAVE</span> button when you are ready.
+            </li>
+        </ol>
+        <h2 id='hwt3'>Add a Clinic Day</h2>
+        <ol class='list-decimal ml-6'>
+            <li>In the Venue List view click the <span
+                    class='rounded-lg bg-gray-200 border-2 border-gray-200 p-0.5'><img
+                        src='assets/icons/calendar-day.svg' class=' pb-1 a-img-vsm' /> Days</span> button at the bottom
+                of the
+                desired venue card.</li>
+            <li>Select the clinician who will run the clinic.</li>
+            <li>Click the <span class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/plus.svg' class='pb-1 a-img-vsm text-white'
+                        style='filter: invert(100%) sepia(51%) saturate(1176%) hue-rotate(272deg) brightness(129%) contrast(93%);' />
+                    Add</span> button. A line will appear with the cursor at the date entry.</li>
+            <li>Enter a date. When entered the system will fill in Start Time and end time from the defualts set in the
+                venue page.</li>
+            <li>Edit the start and end times if you wish.</li>
+            <li> If you wish to add any breaks, then click the <img src='assets/icons/plus.svg'
+                    class=' pb-1 a-img-vsm' />under the breaks heading. You will be presented with a start and end time
+                for the break. Once you have filled them in then click the <img src='assets/icons/check.svg'
+                    class='pb-1 a-img-vsm' />.</li>
+            <li>Once you are happy with the date then click the <img src='assets/icons/check.svg'
+                    class='pb-1 a-img-vsm' /> at the end of the line.</li>
+        </ol>
+        <h1 id='stats'>Stats Page</h1>
+        <img src='assets/pages/venues/image3.png' style='width:600px'>
+        <p>The Venue Stats page contains some overall stats for venues. It has three main areas:</p>
+        <ul>
+            <li>The Toolbar</li>
+            <li>The Tabs</li>
+            <li>The display area</li>
+        </ul>
+        <h2 id='stb'>The Toolbar</h2>
+        <p>The toolbar is the top most section. It has summary data on th left:</p>
+        <ul>
+            <li><b>Appointments</b> - The total number of appointments</li>
+            <li><b>Mth Avg.</b> - The average number of appointments per month.</li>
+            <li><b>Attended</b> - The percentage of attended Appointments</li>
+            <li><b>Attended</b> - The percentage of attended Appointments</li>
+        </ul>
+        <p>On the right hand side is a toggle that switches between TY (This Year) and LY (Last Year)</p>
+        <h2 id='stab'>The Tabs</h2>
+        <p>This switches between a chart breakdown of venues appointments and a data view.</p>
+
+        <h2 id='sd'>The Display</h2>
+        <p>This is where the views are displayed.</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.js-toc-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+    </script>
+</body>
+
+</html>

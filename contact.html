@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contacts</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+</head>
+
+<body class='p-3'>
+    <nav class="toc-left relative z-1 transition--300 absolute pa4 pt-6 is-position-fixed">
+        <h1 class='mt-0'>Contacts</h1>
+        <div class='toc js-toc'></div>
+    </nav>
+    <div class="content js-toc-content pa4 pt-0 ml-80">
+        <h1 id="overview" class='mt-3'>Overview</h1>
+        <p>Contacts are third parties related to the client. They could be Solicitors, Insurance companies, IPs,
+            Parents, etc.</p>
+        <h1 id="list">List View</h1>
+        <p>The page shows the list of contacts in the system. It can be filtered and sorted by using the column headers
+            (See
+            below). Clicking on any of the contacts will take you to their contact page.</p>
+        <img src='assets/pages/contacts/image1.png' style='height:800px'>
+        <p>The page is split into five areas:</p>
+
+        <ol class='list-decimal ml-6'>
+            <li>ToolBar</li>
+            <li>Filter Bar</li>
+            <li>Client Table Header</li>
+            <li>Client List</li>
+            <li>The Navigation Bar</li>
+            <li>Toolbar</li>
+        </ol>
+        <h3 id='cltoolbar'>Toolbar</h3>
+        <p>The toolbar has three buttons:</p>
+        <table class='a-menu-table'>
+            <thead>
+                <th>Icon</th>
+                <th>Label</th>
+                <th>Position</th>
+                <th>Purpose</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src='assets/icons/file-excel.svg' class='a-img-sm ' /></td>
+                    <td>Export</td>
+                    <td>Left</td>
+                    <td>This exports the contact list to a pdf.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/analytics.svg' class='a-img-sm ' /></td>
+                    <td>Stats</td>
+                    <td>Left</td>
+                    <td>Open the contact Stats Page.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/plus.svg' class='a-img-sm ' /></td>
+                    <td>Add</td>
+                    <td>Right</td>
+                    <td>AThis opens the add contact page.</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3 id='clfilterbar'>Filter Bar</h3>
+        <p>This is a set predefined filters</p>
+        <table class='a-menu-table'>
+            <thead>
+                <th>Icon</th>
+                <th>Label</th>
+                <th>Position</th>
+                <th>Purpose</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src='assets/icons/search.svg' class='a-img-sm ' /></td>
+                    <td></td>
+                    <td>Right</td>
+                    <td>This text field will filter the contacts by name.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id='cltableheader'>Table Header</h3>
+        <p>This contains the header information for the table. It has two features:</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td class='font-bold pr-6'>Sort</td>
+                    <td>If you click on any of the headers it will sort to that field. If you click it again it will
+                        reverse
+                        the
+                        sort
+                        and clicking it again will remove the sort.</td>
+                </tr>
+                <tr>
+                    <td class='font-bold pr-6'>Filter</td>
+                    <td>Each field is filterable by clicking on the ‘filter’ icon and a small pop-up will open giving
+                        you
+                        options
+                        to
+                        consider.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id='cltablelist'>Table List</h3>
+        <p>This is the list of available contacts. If you wish to open a contact click the relevant line.</p>
+        <h3 id='clnavbar'>Navigation Bar</h3>
+        <p>This show the numbers of records on the right and navigation buttons on the left.</p>
+        <h1 id='page'>Page View</h1>
+        <p>The Contact page contains all the details for the contact. It has two main areas:</p>
+        <ul>
+            <li>The navigation Sidebar</li>
+            <li>The display area</li>
+        </ul>
+
+        <h2 id='navsidemenu'>Navigation Side Menu</h2>
+        <div class="h-400 flex flex-wrap content-start">
+            <div><img src='assets/pages/contacts/image2.png' style='height:400px'></div>
+            <div class='p-5'>
+                <p>This is split (in order from top to bottom) into:</p>
+
+                <ul>
+                    <li>Navigation Buttons</li>
+                    <li>Action Buttons</li>
+                    <li>Info</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h3 id='ccmenu'>Menu Buttons</h3>
+        <p>When you have selected a menu item then this area will show the details in the display area to the right. On
+            opening the page the contact
+            overview is
+            shown.</p>
+        <table class='a-menu-table'>
+            <thead>
+                <th>Icon</th>
+                <th>Label</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src='assets/icons/info.svg' class='a-img-sm ' /></td>
+                    <td>Overview</td>
+                    <td>Shows contact summary information</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/user.svg' class='a-img-sm' /></td>
+                    <td>Details</td>
+                    <td>This is where you can edit the contact full details</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/folder.svg' class='a-img-sm' /></td>
+                    <td>Documents</td>
+                    <td>This is where you can view the contact documents</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/calendar-day.svg' class='a-img-sm' /></td>
+                    <td>Diary</td>
+                    <td>This is where you can view the appointments related to the contact.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/question.svg' class='a-img-sm' /></td>
+                    <td>Quieries</td>
+                    <td>This is where you can see all open queries related to the contact (If there is a number to the
+                        right,the
+                        number
+                        refers to all open queries)</td>
+                </tr>
+
+                <tr>
+                    <td><img src='assets/icons/comment-alt-lines.svg' class='a-img-sm' /></td>
+                    <td>Call Log</td>
+                    <td>This is where you can log interactions with the contact.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/file-invoice-dollar.svg' class='a-img-sm' /></td>
+                    <td>Invoices</td>
+                    <td>This is where you can see all invoices related to the contact.</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3 id='ccactions'>Action Buttons</h3>
+        <p>In Order of Appearance theses are:</p>
+
+        <table class='a-menu-table'>
+            <tr>
+                <th>Icon</th>
+                <th>Label</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/envelope-open-text.svg' class='a-img-sm' /></td>
+                <td>Envelope</td>
+                <td>Envelope Opens the create Correspondence page</td>
+            </tr>
+            <tr>
+                <td><img src='assets/icons/comment-alt-lines.svg' class='a-img-sm' /></td>
+                <td>Comment</td>
+                <td>Comment Opens the Call Log Dialog</td>
+            </tr>
+        </table>
+        <h1 id='stats'>Stats Page</h1>
+        <img src='assets/pages/contacts/image3.png' style='height:800px'>
+        <p>The Contact Stats page contains some overall stats for contacts. It has three main areas:</p>
+        <ul>
+            <li>The Toolbar</li>
+            <li>The Tabs</li>
+            <li>The display area</li>
+        </ul>
+        <h2 id='stb'>The Toolbar</h2>
+        <p>The toolbar is the top most section. It has summary data on th left:</p>
+        <ul>
+            <li><b>Appointments</b> - The total number of appointments</li>
+            <li><b>Avg.</b> - The average number of appointments per month.</li>
+            <li><b>Attended</b> - The percentage of attended Appointments</li>
+            <li><b>Attended</b> - The percentage of attended Appointments</li>
+        </ul>
+        <p>On the right hand side is a toggle that switches between TY (This Year) and LY (Last Year)</p>
+        <h2 id='stab'>The Tabs</h2>
+        <p>This switches between a chart breakdown of contacts appointments and a data view.</p>
+
+        <h2 id='sd'>The Display</h2>
+        <p>This is where the views are displayed.</p>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+            tocSelector: '.js-toc',
+            contentSelector: '.js-toc-content',
+            headingSelector: 'h1, h2, h3',
+            hasInnerContainers: true,
+        });
+    </script>
+</body>
+
+</html>

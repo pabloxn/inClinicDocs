@@ -39,7 +39,7 @@
 
 <body>
   <nav class="sticky top-0 z-40 lg:z-50 w-full max-w-8xl mx-auto bg-gray-100 flex-none flex p-3">
-    <img src='./assets/img/inclinic-logo.png' style='height:50px;' class='pr-5'>
+    <a onclick="go('./launch.html')"><img src='./assets/img/inclinic-logo.png' style='height:50px;' class='pr-5'></a>
     <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
       onclick="go('./clinic.html')"><img src='assets/icons/clipboard-list-check.svg' width='15' class='float-left'>
       <span class='ml-3'>CLINIC</span></a>
@@ -49,6 +49,12 @@
     <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
       onclick="go('./client.html')"><img src='assets/icons/user.svg' width='15' class='float-left'>
       <span class='ml-3'>CLIENTS</span></a>
+    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
+      onclick="go('./contact.html')"><img src='assets/icons/address-book.svg' width='15' class='float-left'>
+      <span class='ml-3'>CONTACTS</span></a>
+    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
+      onclick="go('./venue.html')"><img src='assets/icons/map-marked-alt.svg' width='20' class='float-left'>
+      <span class='ml-3'>VENUES</span></a>
   </nav>
   <iframe id="calendar" src="launch.html" class='bg-white lg:flex' style="
      
