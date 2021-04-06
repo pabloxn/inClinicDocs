@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+</head>
+
+<body class='p-3'>
+    <nav class="toc-left relative z-1 transition--300 absolute pa4 pt-6 is-position-fixed">
+        <h1 class='mt-0'>Task</h1>
+        <div class='toc js-toc'></div>
+    </nav>
+    <div class="content js-toc-content pa4 pt-0 ml-80">
+        <h1 id="overview" class='mt-3'>Overview</h1>
+        <p>Tasks are activities that a user has to do. They can be linked together so that the completion of one task
+            activates the next and are a core part of inClinic. They can
+            either be manually created or created via the system using workflows.
+        </p>
+        <h2 id='list'>Tasks List</h1>
+            <p>
+                This view lists all your active tasks. You can view the task from here, filter the task list and apply
+                bulk
+                actions to the tasks. The bottom left of the list shows some simple stats for you.
+            </p>
+            ‌ <img src='assets/pages/tasks/image1.png' style='width:800px'>
+
+            <p>The page is split into three areas:</p>
+
+            <ol class='list-decimal ml-6'>
+                <li>ToolBar</li>
+                <li>Filter Bar</li>
+                <li>Tasks List</li>
+            </ol>
+            <h3 id='cltoolbar'>Toolbar</h3>
+            <p>On the left are three numbers. The first is the number of active tasks you have. The second is the number
+                of
+                tasks on hold and the last is the number of late tasks. On the right hand side the toolbar has three
+                buttons:</p>
+            <table class='a-menu-table'>
+                <thead>
+                    <th>Icon</th>
+                    <th>Label</th>
+                    <th>Purpose</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src='assets/icons/ellipsis-v.svg' class='a-img-sm ' /></td>
+                        <td>Bulk Action</td>
+                        <td>This is menu to use with selected tasks (see below)</td>
+                    </tr>
+                    <tr>
+                        <td><img src='assets/icons/user-check.svg' class='a-img-sm ' /></td>
+                        <td>Assign Tasks</td>
+                        <td>This opens the task assignment page.</td>
+                    </tr>
+                    <tr>
+                        <td><img src='assets/icons/plus.svg' class='a-img-sm ' /></td>
+                        <td>Add</td>
+                        <td>This opens the add Task dialog.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h3 id='clfilterbar'>Filter Bar</h3>
+            <p>This is a set predefined filters</p>
+            <table class='a-menu-table'>
+                <thead>
+                    <th>Icon</th>
+                    <th>Label</th>
+                    <th>Position</th>
+                    <th>Purpose</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>Switch Users</td>
+                        <td>Left</td>
+                        <td>Shows the tasks of the selected user.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Filter:?</td>
+                        <td>Left</td>
+                        <td>Filters the tasks by status. When the page opens the filter is set to <b>Active</b>. The
+                            question mark is where the current status filter shows.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Period:?</td>
+                        <td>Left</td>
+                        <td>Filters the tasks by period. When the page opens the filter is set to <b>All</b>. The
+                            question
+                            mark is where the current period filter shows.</td>
+                    </tr>
+                    <tr>
+                        <td><img src='assets/icons/search.svg' class='a-img-sm ' /></td>
+                        <td></td>
+                        <td>Right</td>
+                        <td>This text field will filter the tasks by description.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id='cltablelist'>Tasks List</h3>
+            <p>The tasks are listed in date order and each line has contains information about the task.</p>
+            <p> To open the task then click anywhere on the line except on the checkbox.</p>
+            <img src='assets/pages/tasks/image2.png'>
+
+            <table class='a-menu-table mt-5'>
+                <thead>
+                    <th>Number</th>
+                    <th>Label</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>1</span>
+                        </td>
+                        <td><img src='assets/icons/square.svg' class='a-img-sm ' /></td>
+                        <td>This is for the selection of multiple tasks and using the bulk actions against</td>
+                    </tr>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>2</span>
+                        </td>
+                        <td>Details</td>
+                        <td>This is the task details information</td>
+                    </tr>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>3</span>
+                        </td>
+                        <td>Assignment</td>
+                        <td>This is who is the associated clinician and who is assignee to the task</td>
+                    </tr>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>4</span>
+                        </td>
+                        <td>Due On</td>
+                        <td>When is the task due</td>
+                    </tr>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>5</span>
+                        </td>
+                        <td>Created On</td>
+                        <td>When was the task created</td>
+                    </tr>
+                    <tr>
+                        <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>6</span>
+                        </td>
+                        <td>Status</td>
+                        <td>Status information</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Bulk Actions
+        </h2>
+        <p>In addition there is bulk actions. Bulk actions can apply changes to multiple tasks in one go.</p>
+        <p>You can select multiple tasks by clicking on the checkbox for each one you want to change. When a task or
+            tasks are selected this way then the <span
+                class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img src='assets/icons/ellipsis-v.svg'
+                    class='pb-1 a-img-vsm' /> Bulk Actions</span> button will no longer be grayed out and you will be
+            able to
+            apply an action from the dropdown menu.</p>
+        <p>Available actions are:</p>
+        <table class='a-list-table'>
+            <thead>
+                <th>Label</th>
+                <th>Purpose</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Complete</td>
+                    <td>Set task(s) status to complete.</td>
+                </tr>
+                <tr>
+                    <td>Assign To</td>
+                    <td>Assign all selected tasks to a user.</td>
+                </tr>
+                <tr>
+                    <td>Set On Hold</td>
+                    <td>Set task(s) to on hold (Paused).</td>
+                </tr>
+                <tr>
+                    <td>Priority</td>
+                    <td>Change the priority of all selected tasks.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="page">Task Page</h2>
+
+        <p>This is a worksheet for the task. It displays information about the and ways of interacting with the task and
+            other related information.</p>
+
+        <p>The display contains three main areas the header and the tabs area:</p>
+        <ol class='list-decimal ml-6'>
+            <li>Toolbar</li>
+            <li>Tabs</li>
+            <li>Display Area</li>
+        </ol>
+        <h3 id="chd">Toolbar</h3>
+        <p></p>This is where we can manipulate the task.</p>
+        <img src="./assets/pages/tasks/image3.png">
+        <table class='a-menu-table mt-5'>
+            <thead>
+                <th>Number</th>
+                <th>Label</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>1</span>
+                    </td>
+                    <td><img src='assets/icons/square.svg' class='a-img-sm ' /></td>
+                    <td>Clicking this will complete/uncomplete the task.</td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>2</span>
+                    </td>
+                    <td>Details</td>
+                    <td>This is the task details information. </td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>3</span>
+                    </td>
+                    <td>Due Date</td>
+                    <td>The due date of the task</td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>4</span>
+                    </td>
+                    <td>Status</td>
+                    <td>The status of the task.</td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>5</span>
+                    </td>
+                    <td>A Timer</td>
+                    <td>Enables the user to record the amount of time taken on a task.</td>
+                </tr>
+                <tr>
+                    <td><span class='rounded-xl bg-red-500 border-2 border-red-500 pl-1 pr-1 text-white'>6</span>
+                    </td>
+                    <td>Action</td>
+                    <td>A menu for actions associated with the task.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 id="ctabs">Tabs</h3>
+        <p>The tab areas are for interaction and further information:</p>
+        <table class='a-menu-table'>
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Tab Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src='assets/icons/info.svg' class='a-img-sm ' /></td>
+                    <td style="text-align:left">Overview</td>
+                    <td style="text-align:left">The overview shows related information to the task like the client,
+                        case, and incident information and also show a comment input area.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/folder.svg' class='a-img-sm ' /></td>
+                    <td>Documets</td>
+                    <td>The documents tab shows the case or the queries documents.. See <a
+                            href="../../misc./documents.md">Documents</a>.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/clipboard.svg' class='a-img-sm ' /></td>
+                    <td>Process Notes</td>
+                    <td>This shows case notes.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/question.svg' class='a-img-sm ' /></td>
+                    <td>Quieries</td>
+                    <td>This shows any queries related to the case.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/file-invoice-dollar.svg' class='a-img-sm ' /></td>
+                    <td>Charges</td>
+                    <td>This shows all charges related to the parent(eg. appointment)</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="cdis">Display</h3>
+        <p>This is the display area when you click on a tab. The page shows the overview when loaded.</p>
+        <table class='a-menu-table'>
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Tab Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src='assets/icons/square.svg' class='a-img-sm ' /></td>
+                    <td style="text-align:left">Complete</td>
+                    <td style="text-align:left">This completes the task. If this is a chain of tasks then it will
+                        activate the next one in the list.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/pause.svg' class='a-img-sm ' /></td>
+                    <td>Set On Hold</td>
+                    <td>Sets the task to on hold.</a>.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/pen.svg' class='a-img-sm ' /></td>
+                    <td>Edit</td>
+                    <td>Opens a dialog to edit the task.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/file-word.svg' class='a-img-sm ' /></td>
+                    <td>Fill Word Template</td>
+                    <td>Opens a dialog to fill the word template based on the current records</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/briefcase-medical.svg' class='a-img-sm ' /></td>
+                    <td>Add Case Information</td>
+                    <td>Add additional case information.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/arrow-alt-right.svg' class='a-img-sm ' /></td>
+                    <td>View Client</td>
+                    <td>Jumps to the associated client page</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/file-image.svg' class='a-img-sm ' /></td>
+                    <td>View OCR</td>
+                    <td>Opens a dialog to upload an image and return the image text.</td>
+                </tr>
+                <tr>
+                    <td><img src='assets/icons/trash.svg' class='a-img-sm ' /></td>
+                    <td>Delete</td>
+                    <td>Delete the task.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+            tocSelector: '.js-toc',
+            contentSelector: '.js-toc-content',
+            headingSelector: 'h1, h2, h3',
+            hasInnerContainers: true,
+        });
+    </script>
+</body>
+
+</html>

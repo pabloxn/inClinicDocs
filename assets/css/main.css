@@ -104,6 +104,21 @@ ol {
   padding: 8px 16px 8px 8px;
 }
 
+.a-list-table td {
+  padding: 8px 16px 8px 8px;
+}
+
+.a-list-table td:nth-child(1) {
+  font-weight: bold;
+}
+
+.a-list-table th {
+  background-color: #0078d4;
+  color: white;
+  font-size: 15px;
+  padding: 8px 16px 8px 8px;
+}
+
 .a-border-info {
   border-left: 6px solid #6ac35e;
 }
