@@ -13,11 +13,11 @@
     window.onload = function () {
       var page = getParameterByName("page");
       var subpage = getParameterByName("subpage");
-      if (showPage) {
+      if (page) {
         if (subpage) {
-          go(showPage + '.html#' + subpage);
+          go(page + '.html#' + subpage);
         } else {
-          go(showPage + '.html');
+          go(page + '.html');
         }
 
       }
