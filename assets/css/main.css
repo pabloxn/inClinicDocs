@@ -135,3 +135,7 @@ ol {
   grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
   grid-gap: 20px;
 }
+
+.toc-left {
+  width: 302px;
+}
