@@ -19,7 +19,6 @@
         } else {
           go(page + '.html');
         }
-
       }
     };
 
@@ -40,6 +39,8 @@
 <body>
   <nav class="sticky top-0 z-40 lg:z-50 w-full max-w-8xl mx-auto bg-gray-100 flex-none flex p-3">
     <a onclick="go('./launch.html')"><img src='./assets/img/inclinic-logo.png' style='height:50px;' class='pr-5'></a>
+    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
+      onclick="go('./launch.html')"><img src='assets/icons/home.svg' width='25' class='float-left'></a>
     <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
       onclick="go('./clinic.html')"><img src='assets/icons/clipboard-list-check.svg' width='15' class='float-left'>
       <span class='ml-3'>CLINIC</span></a>

@@ -111,3 +111,12 @@ ol {
 .a-border-warn {
   border-left: 6px solid red;
 }
+
+.grid {
+  display: grid;
+}
+
+.grid.grid-container--fill {
+  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  grid-gap: 20px;
+}
