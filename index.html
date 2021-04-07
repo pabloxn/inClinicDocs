@@ -4,11 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
     document.getElementsByTagName("html")[0].className += " js";
 
     function go(loc) {
+      var $hlinks = $('.greedy-nav .hidden-links');
       document.getElementById('calendar').src = loc;
+      $hlinks.addClass('hidden');
     }
     window.onload = function () {
       var page = getParameterByName("page");
@@ -33,41 +37,267 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/menu.css">
+  <style>
+    body {
+      min-width: 320px;
+    }
+
+    h1 {
+      color: #000;
+      font-weight: bold;
+      margin-top: 2rem;
+      font-size: 24px;
+    }
+
+    p {
+      color: #000;
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 18px;
+      max-width: 50ex;
+    }
+
+    p.large {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .greedy-nav {
+      position: relative;
+      min-width: 250px;
+      height: 70px;
+    }
+
+    .greedy-nav a {
+      display: block;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .greedy-nav button {
+      position: absolute;
+      height: 100%;
+      right: 0;
+      padding: 0 15px;
+      border: 0;
+      outline: none;
+      background-color: rgba(229, 231, 235, 1);
+      color: #000;
+      cursor: pointer;
+    }
+
+    .greedy-nav button:hover {
+      background-color: rgba(209, 213, 219, 1);
+    }
+
+    .greedy-nav button:hover::after {
+      transform: scale(1.075);
+    }
+
+    .greedy-nav .hamburger {
+      position: relative;
+      width: 32px;
+      height: 4px;
+      background: #505050;
+      margin: auto;
+    }
+
+    .greedy-nav .hamburger:before,
+    .greedy-nav .hamburger:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 4px;
+      background: #505050;
+    }
+
+    .greedy-nav .hamburger:before {
+      top: -8px;
+    }
+
+    .greedy-nav .hamburger:after {
+      bottom: -8px;
+    }
+
+    .greedy-nav .visible-links {
+      display: inline-table;
+    }
+
+    .greedy-nav .visible-links li {
+      display: table-cell;
+    }
+
+    .greedy-nav .hidden-links {
+      position: absolute;
+      right: 0px;
+      top: 100%;
+    }
+
+    .greedy-nav .hidden-links li {
+      display: block;
+    }
+
+    .greedy-nav .visible-links li:first-child {
+      font-weight: bold;
+    }
+
+    .greedy-nav .hidden {
+      visibility: hidden;
+    }
+
+    .a-left-sec {
+      display: inline-block;
+      vertical-align: top;
+      width: 20px;
+    }
+
+    .a-right-sec {
+      display: inline-block;
+
+    }
+
+    .a-logo {
+      background-image: url(./assets/img/inclinic-logo.png);
+      background-repeat: no-repeat;
+      background-size: 140px;
+      background-position: top 5px left 5px;
+    }
+  </style>
   <title>InClinic Help</title>
 </head>
 
 <body>
-  <nav class="sticky top-0 z-40 lg:z-50 w-full max-w-8xl mx-auto bg-gray-100 flex-none flex p-3">
-    <a onclick="go('./launch.html')"><img src='./assets/img/inclinic-logo.png' style='height:50px;' class='pr-5'></a>
-    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
-      onclick="go('./launch.html')"><img src='assets/icons/home.svg' width='25' class='float-left'></a>
-    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
-      onclick="go('./clinic.html')"><img src='assets/icons/clipboard-list-check.svg' width='15' class='float-left'>
-      <span class='ml-3'>CLINIC</span></a>
-    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
-      onclick="go('./diary.html')"><img src='assets/icons/calendar-day.svg' width='15' class='float-left'>
-      <span class='ml-3'>DIARY</span></a>
-    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
-      onclick="go('./client.html')"><img src='assets/icons/user.svg' width='15' class='float-left'>
-      <span class='ml-3'>CLIENTS</span></a>
-    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
-      onclick="go('./contact.html')"><img src='assets/icons/address-book.svg' width='15' class='float-left'>
-      <span class='ml-3'>CONTACTS</span></a>
-    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
-      onclick="go('./venue.html')"><img src='assets/icons/map-marked-alt.svg' width='20' class='float-left'>
-      <span class='ml-3'>VENUES</span></a>
-    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
-      onclick="go('./task.html')"><img src='assets/icons/tasks.svg' width='20' class='float-left'>
-      <span class='ml-3'>TASKS</span></a>
-    <a class='bg-gray-200 rounded-md m-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4'
-      onclick="go('./setting.html')"><img src='assets/icons/cogs.svg' width='20' class='float-left'>
-      <span class='ml-3'>SETTINGS</span></a>
+  <nav class='greedy-nav bg-gray-100  a-logo pl-44 '>
+    <button>
+      <div class="hamburger"></div>
+    </button>
+
+
+
+    <ul class='visible-links pt-3'>
+      <li><a class='bg-gray-200 rounded-md mr-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4 '
+          onclick="go('./launch.html')" style='min-width: 60px'><img src='assets/icons/home.svg' width='25'
+            class='inline-block mb-1'></a></li>
+      <li><a class='bg-gray-200 rounded-md mr-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4 '
+          onclick="go('./clinic.html')" style='min-width: 130px;'>
+          <img src='assets/icons/clipboard-list-check.svg' width='18' class='inline-block mb-1'>
+          <span class='ml-3 inline-block '>CLINIC</span></a></li>
+      <li>
+        <a class='bg-gray-200 rounded-md mr-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4 '
+          onclick="go('./diary.html')" style='min-width: 130px;'>
+          <img src='assets/icons/calendar-day.svg' width='20' class='inline-block mb-1'>
+          <span class='ml-3 inline-block '>DIARY</span>
+        </a>
+      </li>
+      <li>
+        <a class='bg-gray-200 rounded-md mr-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4 '
+          onclick="go('./client.html')" style='min-width: 150px;'>
+          <img src='assets/icons/user.svg' width='20' class='inline-block mb-1'>
+          <span class='ml-3 inline-block'>CLIENTS</span>
+        </a>
+      </li>
+      <li>
+        <a class='bg-gray-200 rounded-md mr-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4 '
+          onclick="go('./contact.html')" style='min-width: 170px;'>
+          <img src='assets/icons/address-book.svg' width='18' class='inline-block mb-1'>
+          <span class='ml-3 inline-block'>CONTACTS</span>
+        </a>
+      </li>
+      <li>
+        <a class='bg-gray-200 rounded-md mr-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4 '
+          onclick="go('./venue.html')" style='min-width: 150px;'>
+          <img src='assets/icons/map-marked-alt.svg' width='20' class='inline-block mb-1'>
+          <span class='ml-3 inline-block'>VENUES</span>
+        </a>
+      </li>
+      <li>
+        <a class='bg-gray-200 rounded-md mr-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4 '
+          onclick="go('./task.html')" style='min-width: 130px;'>
+          <img src='assets/icons/tasks.svg' width='20' class='inline-block mb-1'>
+          <span class='ml-3 inline-block'>TASKS</span>
+        </a>
+      </li>
+      <li>
+        <a class='bg-gray-200 rounded-md mr-3 p-2 transition hover:bg-gray-300 font-medium pl-4 pr-4 '
+          onclick="go('./setting.html')" style='min-width: 170px;'>
+          <img src='assets/icons/cogs.svg' width='20' class='inline-block mb-1'>
+          <span class='ml-3 inline-block'>SETTINGS</span>
+        </a>
+      </li>
+    </ul>
+    <ul class='hidden-links hidden bg-white'></ul>
   </nav>
   <iframe id="calendar" src="launch.html" class='bg-white lg:flex' style="
      
       width: 100%;
       height: 100vh;" frameborder="0"></iframe>
+  <script>
+    var $nav = $('.greedy-nav');
+    var $btn = $('.greedy-nav button');
+    var $vlinks = $('.greedy-nav .visible-links');
+    var $hlinks = $('.greedy-nav .hidden-links');
 
+    var breaks = [];
+
+    function updateNav() {
+
+      var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
+
+      // The visible list is overflowing the nav
+      if ($vlinks.width() > availableSpace) {
+
+        // Record the width of the list
+        breaks.push($vlinks.width());
+
+        // Move item to the hidden list
+        $vlinks.children().last().prependTo($hlinks);
+
+        // Show the dropdown btn
+        if ($btn.hasClass('hidden')) {
+          $btn.removeClass('hidden');
+        }
+
+        // The visible list is not overflowing
+      } else {
+
+        // There is space for another item in the nav
+        if (availableSpace > breaks[breaks.length - 1]) {
+
+          // Move the item to the visible list
+          $hlinks.children().first().appendTo($vlinks);
+          breaks.pop();
+        }
+
+        // Hide the dropdown btn if hidden list is empty
+        if (breaks.length < 1) {
+          $btn.addClass('hidden');
+          $hlinks.addClass('hidden');
+        }
+      }
+
+      // Keep counter updated
+      $btn.attr("count", breaks.length);
+
+      // Recur if the visible list is still overflowing the nav
+      if ($vlinks.width() > availableSpace) {
+        updateNav();
+      }
+
+    }
+
+    // Window listeners
+
+    $(window).resize(function () {
+      updateNav();
+    });
+
+    $btn.on('click', function () {
+      $hlinks.toggleClass('hidden');
+    });
+
+    updateNav();
+  </script>
 </body>
 
 </html>
