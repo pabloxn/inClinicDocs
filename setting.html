@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Settings</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+</head>
+
+<body class='p-3'>
+    <nav class="toc-left relative z-1 transition--300 absolute pa4 pt-6 is-position-fixed">
+        <h1 class='mt-0'>Settings</h1>
+        <div class='toc js-toc'></div>
+    </nav>
+    <div class="content js-toc-content pa4 pt-0 ml-80">
+        <h1 id="overview" class='mt-3'>Overview</h1>
+        <p>The settings area is for all settings in inClinic.</p>
+
+        <h1 id="set4">Case Types</h1>
+        <h2 id="set4-1">What are Case Types?</h2>
+        <p>Case Types are a definition of cases, which is fundamentally a collection of appointments. You can define a
+            name,
+            description and the number of associated appointments and their types. This does stop you adding more or
+            reducing the number of appointments for a case, but give the defaults.</p>
+        <h2 id="set4-2">How do I create an case type?</h2>
+        <ol class='list-decimal ml-6 mt-6 a-loose-list'>
+            <li>Under settings choose &#39;Case Types&#39;.</li>
+            <li>Click the <span class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/plus.svg' class='pb-1 a-img-vsm a-white-svg' />
+                    Add</span> button and
+                you
+                will the Case Type Template Form.</li>
+            <li>You will need to give the template a name, preferably something that is meaningful to its purpose.</li>
+            <li>[Optional] You can add a description. This is optional and is there as an aide memoire.</li>
+            <li>You then need to define the number of sessions. It defaults to 1.</li>
+            <li>Then you will need to set the default appointment type. When you create an appointment this is the
+                appointment type used.</li>
+            <li>If you have more than 1 session set then you will have access to a initial default appointment type and
+                more
+                than 2 then a final appointment type.</li>
+            <li>Once you have done that you can click the <span
+                    class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/check.svg' class='pb-1 a-img-vsm a-white-svg' />
+                    Save</span> button and you will
+                be
+                taken back to the list view.</li>
+        </ol>
+        <h2 id="set4-3">Related Links</h2>
+        <ul class='a-border-link a-list-links'>
+            <li><a href='#set5'>Appointment Types</a></li>
+        </ul>
+        <h1 id="set5">Appointment Types</h1>
+        <h2 id="set5-1">What are appointment Types</h2>
+        <p>Appointment Types are a definition of appointments, include their standard duration, the associated task
+            templates and any default charges are against the appointment.</p>
+        <h2 id="set5-2">How do I create an appointment type?</h2>
+        <ol class='list-decimal ml-6 mt-6 a-loose-list'>
+            <li>Under settings choose &#39;Appointment Types&#39;.</li>
+            <li>Click the <span class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/plus.svg' class='pb-1 a-img-vsm a-white-svg' />
+                    Add</span> button and
+                you will the Appointment Type Template Form.</li>
+            <li><strong>[Required]</strong> You will need to give the template a name, preferably something that is
+                meaningful to its purpose.</li>
+            <li>You can add a description. This is optional and is there as an aide memoire.</li>
+            <li><strong>[Required]</strong> You will need to add a standard duration in minutes for the appointment.
+            </li>
+            <li>You can add an icon to identify types of appointment.</li>
+            <li>You can choose a task template to activate when the appointments status is set to &#39;attended&#39;.
+            </li>
+            <li>You can now see three optional tabs:
+                <ol class='ml-12'>
+                    <li>Triggers</li>
+                    <li>Clinician Durations</li>
+                    <li>Chargeable Items</li>
+                </ol>
+            </li>
+            <li>In the first tab you can define workflow triggers:<ul class='list-disc ml-12'>
+                    <li><b>On Create</b> - select to run a workflow on the creation of an appointment.</li>
+                    <li><b>On Change</b> - select to run a workflow on the changing of an appointment ( This only runs a
+                        date/
+                        time or venue is changed)</li>
+                    <li><b>On Attend</b> - select to run a workflow on the appointment being set to attended.</li>
+                    <li><b>On DNA</b> - select to run a workflow on the appointment being set to &#39;Did not
+                        attend&#39;.</li>
+                </ul>
+            </li>
+            <li>In the second tab you can define the clinician duration to override:<ol class='ml-12'>
+                    <li>Click the <img src='assets/icons/plus.svg' class='pb-1 a-img-vsm' /> Add button to add a new
+                        entry.</li>
+                    <li>Select the clinician.</li>
+                    <li>Select the duration of the appointment for this clinician.</li>
+                    <li>click the <img src='assets/icons/check.svg' class='pb-1 a-img-vsm' /> to save the entry.</li>
+                </ol>
+            </li>
+            <li>In the third tab you can select the chargeable items attached to this appointment:<ol class='ml-12'>
+                    <li>You can now choose chargeable items/services to attach to the appointment. Click the <img
+                            src='assets/icons/plus.svg' class='pb-1 a-img-vsm' /> Add button after
+                        the task template field.</li>
+                    <li>In the line choose a type (item or service), this is required.</li>
+                    <li>Choose an item or or service in the next field, this is required.</li>
+                    <li>The description is filled in automatically but can be changed.</li>
+                    <li>The quantity is set to 1 but can be adjusted..</li>
+                    <li>Then click <img src='assets/icons/check.svg' class='pb-1 a-img-vsm' /> button to add the line.
+                        You can
+                        repeat this task if you wish to add more chargeable items.</li>
+                </ol>
+            </li>
+            <li>Click the <span class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/check.svg' class='pb-1 a-img-vsm a-white-svg' />
+                    Save</span> button to save
+                the appointment type.</li>
+        </ol>
+        <h2 id="rset5-3">Related Links <a id="related-links"></a></h2>
+        <ul class='a-border-link a-list-links'>
+            <li><a href='#set11'>Service Items</a></li>
+            <li><a href='#set10'>Stock Items</a></li>
+            <li><a href='#set5'>Workflow Templates</a></li>
+        </ul>
+        <h1 id="set10">Stock Items</h1>
+        <h2 id="set10-1">What are stock Items?</h2>
+        <p>Stock Items are the chargeable stock items to assign to an appointment. The stock item have a description,
+            cost, and a quantity.</p>
+        <h2 id="set10-2">How do I create a stock item?</h2>
+        <ol class='list-decimal ml-6 mt-6 a-loose-list'>
+            <li>Under settings choose &#39;Stock Items&#39;</li>
+            <li>Click the <span class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/plus.svg' class='pb-1 a-img-vsm a-white-svg' />
+                    Add</span> Add button and you will the Stock item Form.</li>
+            <li>You will need to give the service a name, preferably something that is meaningful to its purpose.</li>
+            <li>[Optional] You can add a description. This is optional and is there as an aide memoire.</li>
+            <li>Now you can add the price, its unit of measure and the VAT assigned to it.</li>
+            <li>You can add a quantity value to keep track of stock levels (currently this is a manual number i.e. it is
+                not automatically downed when used in a charge.)</li>
+            <li>Once you have done that you can click the <span
+                    class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/check.svg' class='pb-1 a-img-vsm a-white-svg' />
+                    Save</span> button and you will be taken back to the list view.</li>
+        </ol>
+
+        <h1 id="set11">Service Items</h1>
+        <h2 id="set11-1">What are service Items?</h2>
+        <p>Service Items are the chargeable service items to assign to an appointment. The service item have a
+            description and cost.</p>
+        <h2 id="set11-2">How do I create a service item?</h2>
+        <ol class='list-decimal ml-6 mt-6 a-loose-list'>
+            <li>Under settings choose &#39;Service Items&#39;</li>
+            <li>Click the <span class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/plus.svg' class='pb-1 a-img-vsm a-white-svg' />
+                    Add</span> button and you will the Service item Form.</li>
+            <li>You will need to give the service a name, preferably something that is meaningful to its purpose.</li>
+            <li>[Optional] You can add a description. This is optional and is there as an aide memoire.</li>
+            <li>Now you can add the price, its unit of measure and the VAT assigned to it.</li>
+            <li>Once you have done that you can click the <span
+                    class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/check.svg' class='pb-1 a-img-vsm a-white-svg' />
+                    Save</span> button and you will be taken back to the list view.</li>
+        </ol>
+        <h1 id="set13">Diagnostic Frameworks</h1>
+        <h2 id="set13-1">What are Diagnostic Frameworks?</h2>
+        <p>The diagnostic frameworks are a list of diagnosis. The list includes the code, the title and the description.
+            This is assigned to a client after diagnosis has occurred by the clinician.</p>
+        <h2 id="set13-2">How to create a Diagnostic Framework?</h2>
+        <ol class='list-decimal ml-6 mt-6 a-loose-list'>
+            <li>Under settings choose &#39;Diagnostic Frameworks&#39;</li>
+            <li>Click the <span class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/plus.svg' class='pb-1 a-img-vsm a-white-svg' />
+                    Add</span> button and
+                you will the Diagnostic Framework Form.</li>
+            <li>You will need to give the template a name, preferably something that is meaningful to its purpose.</li>
+            <li>[Optional] You can add a description. This is optional and is there as an aide memoire.</li>
+            <li>Now you can add the diagnosis entries. </li>
+            <li>Once you have added all the diagnosis&#39;s then click the <span
+                    class='rounded-lg bg-blue-500 border-2 border-blue-500 p-0.5 text-white'>
+                    <img src='assets/icons/check.svg' class='pb-1 a-img-vsm a-white-svg' />
+                    Save</span> button and you will
+                be taken back to the list.</li>
+        </ol>
+        <h2 id="set13-3">How do I add/edit a diagnosis?</h2>
+        <ol class='list-decimal ml-6 mt-6 a-loose-list'>
+            <li>
+                <p>Click the <span class='rounded-lg border-2 border-blue-500 p-0.5 text-blue-500'>
+                        <img src='assets/icons/plus.svg' class='pb-1 a-img-vsm' />
+                        Add</span> button below the description field or click the <img src='assets/icons/pen.svg'
+                        class='pb-1 a-img-vsm' /> edit button at the end
+                    of the appropriate workflow step. This will show the edit form. </p>
+            </li>
+            <li>
+                <p>[Required] The first field to enter is the diagnostic Code.</p>
+            </li>
+            <li>[Required] The second field is the title or short name of the diagnosis.</li>
+            <li>[Optional] The final field is the long description and is there for the full dianosis description.</li>
+            <li>Then click the <img src='assets/icons/check.svg' class='pb-1 a-img-vsm' /> to save or a <img
+                    src='assets/icons/times.svg' class='pb-1 a-img-vsm' /> to cancel the entry/changes.</li>
+        </ol>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+            tocSelector: '.js-toc',
+            contentSelector: '.js-toc-content',
+            headingSelector: 'h1, h2, h3',
+            hasInnerContainers: true,
+        });
+    </script>
+</body>
+
+</html>

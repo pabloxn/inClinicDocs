@@ -127,6 +127,34 @@ ol {
   border-left: 6px solid red;
 }
 
+.a-border-link {
+  border-left: 6px solid rgb(255, 123, 0);
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  padding-left: 5px;
+}
+
+.a-list-links li {
+  list-style: none;
+  background-position: left 10px bottom 0px;
+  background-image: url('../icons/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-size: 15px;
+  padding-left: 50px;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+
+.a-list-links {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.a-loose-list li {
+  line-height: 2;
+}
+
 .grid {
   display: grid;
 }
@@ -138,4 +166,8 @@ ol {
 
 .toc-left {
   width: 302px;
+}
+
+.a-white-svg {
+  filter: invert(100%) sepia(51%) saturate(1176%) hue-rotate(272deg) brightness(129%) contrast(93%);
 }
