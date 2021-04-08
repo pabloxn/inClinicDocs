@@ -142,6 +142,11 @@ ol {
   background-image: url(../icons/exclamation-triangle.svg);
 }
 
+.a-optional {
+  font-weight: bold;
+  color: #858585;
+}
+
 .a-link {
   background-image: url(../icons/link.svg);
   background-repeat: no-repeat;
