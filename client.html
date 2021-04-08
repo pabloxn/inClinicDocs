@@ -19,7 +19,7 @@
         <h1 id="overview" class='mt-3'>Overview</h1>
         <p>This section covers the adding and editing of clients, their cases and manage communication with them.</p>
         <p>The two initial sections are: </p>
-        <ol class='pt-2 ml-6'>
+        <ol class='pt-2 ml-6 a-loose-list'>
             <li><b>The clients list</b>, which enables the selection or
                 creation of a client.
             </li>
@@ -33,11 +33,11 @@
         <p>The page shows the list of clients in the system. It can be filtered and sorted by using the column headers
             (See
             below). Clicking on any of the clients will take you to their client page.</p>
-        <img src='assets/pages/client-list/image1.png' style='height:800px'>
+        <img src='assets/pages/client-list/image1.png' style='width:800px'>
 
         <p>The page is split into five areas:</p>
 
-        <ol class='list-decimal ml-6'>
+        <ol class='list-decimal ml-6 a-loose-list'>
             <li>ToolBar</li>
             <li>Filter Bar</li>
             <li>Client Table Header</li>
@@ -129,7 +129,7 @@
         <p>This show the numbers of records on the right and navigation buttons on the left.</p>
         <h1 id='page'>Page View</h1>
         <p>The client view contains all the details for the client. It has two main areas:</p>
-        <ul>
+        <ul class='a-loose-list'>
             <li>The navigation Sidebar</li>
             <li>The display area</li>
         </ul>
@@ -140,7 +140,7 @@
             <div class='p-5'>
                 <p>This is split (in order from top to bottom) into:</p>
 
-                <ul>
+                <ul class='a-loose-list'>
                     <li>Navigation Buttons</li>
                     <li>Action Buttons</li>
                     <li>Info</li>
@@ -234,61 +234,45 @@
         <p>Shows the next appointment or whether they are on the waiting list.</p>
         <h1 id='hwt'>How to..</h1>
         <h2 id='addaclient'><a name="add"></a>Add a Client</h2>
-        <ol class='list-decimal ml-6'>
-            <li>In the Client List view click the <span
-                    class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img src='assets/icons/plus.svg'
-                        class='a-img-vsm' /> Add</span> button</li>
+        <ol class='list-decimal ml-6 a-loose-list'>
+            <li>In the Client List view click the <span class='a-btn a-btn-primary a-btn-add'>Add</span> button</li>
             <li>Enter the clients name:
-                <ul class='list-disc ml-12'>
+                <ul class='list-disc ml-12 a-loose-list'>
                     <li>Enter the title field.</li>
                     <li>Enter the forename</li>
                     <li><b>[Required]</b> Enter the last name.</li>
-                    <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                        <div class="flex-none w-14 text-center">
-                            <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                        </div>
-                        <div class="flex-grow">
-                            The title field will set the gender in some cases. e.g. if Mr is selected then the gender
-                            will
-                            be set to Male.
-                        </div>
+                    <div class="a-info-card">
+                        The title field will set the gender in some cases. e.g. if Mr is selected then the gender
+                        will
+                        be set to Male.
                     </div>
                 </ul>
 
             </li>
             <li>Enter the gender.</li>
             <li>Enter the Date of Birth.</li>
-            <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                <div class="flex-none w-14 text-center">
-                    <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                </div>
-                <div class="flex-grow">
-                    The date of birth will be added to the timeline automatically on saving.
-                </div>
+            <div class="a-info-card">
+                The date of birth will be added to the timeline automatically on saving.
+
             </div>
             <li><b>[Required]</b> Select the Registered Clinic from the drop down. This would be normally be the clinic
                 closest to the
                 client address.</li>
-            <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                <div class="flex-none w-14 text-center">
-                    <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                </div>
-                <div class="flex-grow">
-                    If you set the postcode field and press return the closest clinic will be suggested.
-                </div>
+            <div class="a-info-card">
+                If you set the postcode field and press return the closest clinic will be suggested.
+
             </div>
             <li><b>[Required]</b> Select the clinician from the drop down. This can de dictated by the letter of
                 instruction
                 or the therapy
                 clients preference.</li>
             <li>[Optional] Putting the client on the waiting List:
-                <ul class='list-disc ml-12'>
+                <ul class='list-disc ml-12 a-loose-list'>
                     <li>click the on waiting list check box.</li>
                     <li>Select a Waiting List Reason for the client being put on the waiting list.</li>
                 </ul>
             </li>
-            <li>Click on the <span class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img
-                        src='assets/icons/check.svg' class='a-img-vsm ' /> Save</span> button</li>
+            <li>Click on the <span class='a-btn a-btn-primary a-btn-save'>Save</span> button</li>
         </ol>
 
         <h2 id='wizard'>Add a Client with the Client Wizard</h2>
@@ -307,69 +291,50 @@
                     src='assets/icons/chevron-right.svg' class='a-img-vsm ' /></span> buttons if you wish
             to correct or review what you
             have entered before saving.</p>
-        <div class="flex a-border-warn pt-3 pb-3 mt-3 mb-3">
-            <div class="flex-none w-14 text-center">
-                <img src='assets/icons/exclamation-triangle.svg' class='a-img-sm' />
-            </div>
-            <div class="flex-grow">
-                Client Information will be used to populate the report so extra care must be taken here.
-            </div>
+        <div class="a-warn-card">
+            Client Information will be used to populate the report so extra care must be taken here.
+
         </div>
-        <ol class='list-decimal ml-6'>
-            <li>In the Client List view click the <span
-                    class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img src='assets/icons/plus.svg'
-                        class='a-img-vsm' /> Add Wizard</span> button
+        <ol class='list-decimal ml-6 a-loose-list'>
+            <li>In the Client List view click the <span class='a-btn a-btn-primary a-btn-add'> Add Wizard</span> button
             </li>
         </ol>
         <h3 id='htw1'>Section 1: Client Details</h3>
         <p>Enter the Client Information</p>
 
-        <ol class='list-decimal ml-6'>
+        <ol class='list-decimal ml-6 a-loose-list'>
             <li>Enter the clients name:
-                <ul class='list-disc ml-12'>
+                <ul class='list-disc ml-12 a-loose-list'>
                     <li>Enter the title field.</li>
                     <li>Enter the forename</li>
                     <li><b>[Required]</b> Enter the last name.</li>
-                    <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                        <div class="flex-none w-14 text-center">
-                            <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                        </div>
-                        <div class="flex-grow">
-                            The title field will set the gender in some cases. e.g. if Mr is selected then the gender
-                            will
-                            be set to Male.
-                        </div>
+                    <div class="a-info-card">
+                        The title field will set the gender in some cases. e.g. if Mr is selected then the gender
+                        will
+                        be set to Male.
                     </div>
                 </ul>
 
             </li>
             <li>Enter the gender.</li>
             <li>Enter the Date of Birth.</li>
-            <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                <div class="flex-none w-14 text-center">
-                    <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                </div>
-                <div class="flex-grow">
-                    The date of birth will be added to the timeline automatically on saving.
-                </div>
+            <div class="a-info-card">
+                The date of birth will be added to the timeline automatically on saving.
+
             </div>
             <li><b>[Required]</b> Select the Registered Clinic from the drop down. This would be normally be the clinic
                 closest to the
                 client address.</li>
-            <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                <div class="flex-none w-14 text-center">
-                    <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                </div>
-                <div class="flex-grow">
-                    If you set the postcode field and press return the closest clinic will be suggested.
-                </div>
+            <div class="a-info-card">
+                If you set the postcode field and press return the closest clinic will be suggested.
+
             </div>
             <li><b>[Required]</b> Select the clinician from the drop down. This can de dictated by the letter of
                 instruction
                 or the therapy
                 clients preference.</li>
             <li>[Optional] Putting the client on the waiting List:
-                <ul class='list-disc ml-12'>
+                <ul class='list-disc ml-12 a-loose-list'>
                     <li>click the on waiting list check box.</li>
                     <li>Select a Waiting List Reason for the client being put on the waiting list.</li>
                 </ul>
@@ -383,31 +348,21 @@
 
         <h3 id='htw2'>Section 2: Contact Info</h3>
         <p>This section is for you to add client contact details and who is paying</p>
-        <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-            <div class="flex-none w-14 text-center">
-                <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-            </div>
-            <div class="flex-grow">
-                You may need to scroll up to see the top of this page depending on the width of the browser
-                window.
-            </div>
+        <div class="a-info-card">
+            You may need to scroll up to see the top of this page depending on the width of the browser
+            window.
         </div>
-        <ol class='list-decimal ml-6'>
+        <ol class='list-decimal ml-6 a-loose-list'>
             <li>Select if the Instructing party is a Client (individual) or Contact (company). This will determine what
                 drop down appears in the next field</li>
             <li>Select Instructing party from the drop-down list.</li>
             <li>Select if the Solicitor is a Client (individual) or Contact (company)</li>
             <li>Select the Solicitor from the drop-down list.
-                <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                    <div class="flex-none w-14 text-center">
-                        <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                    </div>
-                    <div class="flex-grow">
-                        If the instructing party or Solicitor is not in the list select Add contact to bring up a dialog
-                        to
-                        enter a new
-                        contacts details.
-                    </div>
+                <div class="a-info-card">
+                    If the instructing party or Solicitor is not in the list select Add contact to bring up a dialog
+                    to
+                    enter a new
+                    contacts details.
                 </div>
             </li>
             <li><b>[Required]</b> Select the Payer (this is usually the instructing party) from drop down (Client,
@@ -417,7 +372,7 @@
                     class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img src='assets/icons/plus.svg'
                         class='a-img-vsm ' /> ADD</span>
                 to enter details for Email, mobile, landline, etc
-                <ul class='list-disc ml-6'>
+                <ul class='list-disc ml-6 a-loose-list'>
                     <li>Select the type email,mobile,etc.</li>
                     <li>Select if it is a home or work contact</li>
                     <li>Enter the number/address in the data section</li>
@@ -433,16 +388,11 @@
         </ol>
         <h3 id='htw3'>Section 3: Case</h3>
         <p>This section is to add the case information.</p>
-        <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-            <div class="flex-none w-14 text-center">
-                <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-            </div>
-            <div class="flex-grow">
-                You may need to scroll up to see the top of this page depending on the width of the browser
-                window.
-            </div>
+        <div class="a-info-card">
+            You may need to scroll up to see the top of this page depending on the width of the browser
+            window.
         </div>
-        <ol class='list-decimal ml-6'>
+        <ol class='list-decimal ml-6 a-loose-list'>
             <li><b>[Required]</b> Select the type of case from the drop down (RTC, Work, Clinical Negligence etc)</li>
             <li>Enter the Payer Reference</li>
             <li>Enter the Solicitor’s Reference</li>
@@ -456,7 +406,7 @@
         </ol>
         <h3 id='htw4'>Section 4: Documents</h3>
         <p>This section is to add any documents associated with the case/client.</p>
-        <ol class='list-decimal ml-6'>
+        <ol class='list-decimal ml-6 a-loose-list'>
             <li>If documents are available then click on <span
                     class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img src='assets/icons/plus.svg'
                         class='a-img-vsm ' /> ADD</span>
@@ -465,7 +415,7 @@
                 date/client</li>
             <li>Navigate to the files and click on Open to add the files to inClinic</li>
             <li>Enter details into the document Manifest. This is used to:
-                <ul class='list-disc ml-12'>
+                <ul class='list-disc ml-12 a-loose-list'>
                     <li>keep a track of what documents exist for the case</li>
                     <li>to help us identify if the number of document pages require additional fees.</li>
                 </ul>
@@ -485,80 +435,55 @@
             </li>
         </ol>
         <h3 id='htw5'>Section 5: Initial Appointment</h3>
-        <ol class='list-decimal ml-6'>
-            <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                <div class="flex-none w-14 text-center">
-                    <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                </div>
-                <div class="flex-grow">
-                    If the client is on the waiting list then you can jump to the save step.
-                </div>
+        <ol class='list-decimal ml-6 a-loose-list'>
+            <div class="a-info-card">
+                If the client is on the waiting list then you can jump to the save step.
+
             </div>
             <li>If the client has already confirmed that they will attend the appointment tick the Appointment Confirmed
                 check
                 box</li>
             <li>Navigate to the date (as previously identified) and select from the shown available times</li>
             <li>Select a time slot from the drop down</li>
-            <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                <div class="flex-none w-14 text-center">
-                    <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                </div>
-                <div class="flex-grow">
-                    All other fields should be filled in and the charges should automatically be filled in.
-                </div>
+            <div class="a-info-card">
+                All other fields should be filled in and the charges should automatically be filled in.
+
             </div>
             <li>Click on the <span class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img
                         src='assets/icons/check.svg' class='a-img-vsm ' /> Save</span> to complete the wizard.
             </li>
-            <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                <div class="flex-none w-14 text-center">
-                    <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                </div>
-                <div class="flex-grow">
-                    You will be prompted to add a further client or view list – select as required
-                    When the wizard is complete the date of birth and date of incident are used to create entries in the
-                    clients
-                    case
-                    timeline.
-                </div>
+            <div class="a-info-card">
+                You will be prompted to add a further client or view list – select as required
+                When the wizard is complete the date of birth and date of incident are used to create entries in the
+                clients
+                case
+                timeline.
             </div>
         </ol>
         <h2 id='waiting'>Add a Client to the Waiting List</h2>
-        <ol class='list-decimal ml-6'>
+        <ol class='list-decimal ml-6 a-loose-list'>
             <li>In the Client List view select a client</li>
             <li>Select Details from the sub-menu</li>
             <li>check the waiting list check box.</li>
             <li><b>[Required]</b> Select a Waiting List Reason for the client being put on the waiting list.</li>
-            <li>Click on the <span class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img
-                        src='assets/icons/check.svg' class='a-img-vsm ' /> Save</span> button</li>
-            <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                <div class="flex-none w-14 text-center">
-                    <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                </div>
-                <div class="flex-grow">
-                    If the client is on the waiting list it is visible in the client list (see on waiting List header)
-                    and
-                    client card (under the sub menu)
-                </div>
+            <li>Click on the <span class='a-btn a-btn-primary a-btn-save'>Save</span> button</li>
+            <div class="a-info-card">
+                If the client is on the waiting list it is visible in the client list (see on waiting List header)
+                and
+                client card (under the sub menu)
             </div>
         </ol>
         <h2 id='unwaiting'>Remove a Client from the Waiting List</h2>
-        <ol class='list-decimal ml-6'>
+        <ol class='list-decimal ml-6 a-loose-list'>
             <li>In the Client List view select a client</li>
             <li>Select Details from the sub-menu</li>
             <li>uncheck the waiting list check box.</li>
-            <li>Click on the <span class='rounded-lg bg-gray-300 border-2 border-gray-300 p-0.5'><img
-                        src='assets/icons/check.svg' class='a-img-vsm ' /> Save</span> button</li>
-            <div class="flex a-border-info pt-3 pb-3 mt-3 mb-3">
-                <div class="flex-none w-14 text-center">
-                    <img src='assets/icons/info-circle.svg' class='a-img-sm' />
-                </div>
-                <div class="flex-grow">
-                    The client is automatically removed from the the waiting list when an appointment is created for
-                    them.
-                    If you cancel this appointment you will have to manually put them back on the waiting list (see
-                    Above)
-                </div>
+            <li>Click on the <span class='a-btn a-btn-primary a-btn-save'>Save</span> button</li>
+            <div class="a-info-card">
+                The client is automatically removed from the the waiting list when an appointment is created for
+                them.
+                If you cancel this appointment you will have to manually put them back on the waiting list (see
+                Above)
             </div>
         </ol>
     </div>
