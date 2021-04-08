@@ -119,6 +119,62 @@ ol {
   padding: 8px 16px 8px 8px;
 }
 
+.a-info-card,
+.a-warn-card {
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: top 50% left 16px;
+  padding: 12px 0px 12px 64px;
+  margin: 12px 0px;
+}
+
+.a-info-card {
+  border-left: 6px solid #3c81e9;
+  background-image: url(../icons/info-circle.svg);
+}
+
+.a-warn-card {
+  border-left: 6px solid red;
+  background-image: url(../icons/exclamation-triangle.svg);
+}
+
+.a-link {
+  background-image: url(../icons/link.svg);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: top 50% left 0px;
+  padding-left: 20px;
+  text-decoration: underline #0078d4;
+}
+
+.a-btn {
+  border-radius: .5rem;
+  padding: .125rem 5px .125rem 1.75rem;
+  border-width: 2px;
+}
+
+.a-btn-primary {
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: top 50% left 5px;
+  border-color: rgba(59, 130, 246, 1);
+  background-color: rgba(59, 130, 246, 1);
+}
+
+.a-btn-save {
+  background-image: url(../icons/check-white.svg);
+}
+
+.a-btn-add {
+  background-image: url(../icons/plus-white.svg);
+
+}
+
 .a-border-info {
   border-left: 6px solid #6ac35e;
 }
