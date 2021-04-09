@@ -198,18 +198,18 @@ ol {
 
 .a-list-links li {
   list-style: none;
-  background-position: left 10px bottom 0px;
-  background-image: url('../icons/arrow-right.svg');
+  background-image: url('../icons/link.svg');
+  background-position: top 50% left 16px;
   background-repeat: no-repeat;
   background-size: 15px;
   padding-left: 50px;
-  margin-top: 8px;
+  margin-top: 10px;
   text-decoration: underline;
 }
 
 .a-list-links {
   padding-top: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .a-loose-list li {
@@ -231,4 +231,10 @@ ol {
 
 .a-white-svg {
   filter: invert(100%) sepia(51%) saturate(1176%) hue-rotate(272deg) brightness(129%) contrast(93%);
+}
+
+blockquote {
+  background-color: rgba(243, 244, 246, 1);
+  padding: 1.5rem;
+  margin: 17px 0;
 }

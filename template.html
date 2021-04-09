@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Title</title>
+    <title>Templates</title>
 
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -11,10 +11,519 @@
 
 <body class='p-3'>
     <nav class="toc-left relative z-1 transition--300 absolute pa4 pt-6 is-position-fixed">
-        <h1 class='mt-0'>Title</h1>
+        <h1 class='mt-0'>Templates</h1>
         <div class='toc js-toc'></div>
     </nav>
     <div class="content js-toc-content pa4 pt-0 ml-80">
+        <h1 id='tem1' class='mt-3'>What are templates?</h1>
+        <p>In inClinic, templates are resuseable documents. They can be emails, sms messages, or Word documents. They
+            all share similar attributes.</p>
+        <p>They all use field attributes. Fields are placeholders for the inClinic data to be placed in. A typical
+            placeholder would look like:</p>
+        <blockquote>{clinic.name}</blockquote>
+        <p>It is constructed using the area (e.g.,clinic), a dot to sperate it, and then the field (e.g.,name). It sits
+            in opening and closing curly brackets. When
+            applied
+            to a document might look like this:
+        </p>
+        <blockquote>The venue is {clinic.name}.</blockquote>
+        <p>... and after it was processed might look like this:</p>
+        <blockquote>The venue is Cambridge.</blockquote>
+        <p>Within inClinic these fields can be inserted using a dropdown, but for Word documents they will have to
+            manually entered.</p>
+        <h2 id='tem1-1'>Related</h2>
+        <ul class='a-border-link a-list-links'>
+            <li><a href='#tem5'>Field Dictionary</a></li>
+            <li><a href='#tem2'>Word Templates</a></li>
+            <li><a href='setting.html#set5'>Correspondence Templates</a></li>
+            <li><a href='setting.html#set6'>SMS Templates</a></li>
+        </ul>
+        <h1 id='tem2'> Word Templates</h1>
+        <h2 id="tem2-1">Overview</h2>
+        <p>You can create a Microsoft Word document that can by filled in by inClinic.The word document needs to have
+            field indicator added to it and then it can be uploaded to inClinic be processed. After a short time the
+            document will be downloaded to your computer and the fields will be replaced with the data from inClinic.
+            This is a little bit like mail merge in Microsoft Office.</p>
+        <h2 id="tem2-2">Preparing a Word Document</h2>
+        <p>A word document needs to have the fields typed into it. The fields list is located below:</p>
+        <ul class='a-border-link a-list-links'>
+            <li><a href='#tem5'>Field Dictionary</a></li>
+        </ul>
+        <p>The fields list is the same as the ones used in the <a
+                href="../main-menu/settings/letter-templates.md">letter templates</a> an the <a
+                href="../main-menu/settings/sms-templates.md">SMS templates</a>. </p>
+        <p>If I wanted to add the clients full name and age to a document I would look up the two relevant fields:</p>
+        <table class='a-list-table'>
+            <thead>
+                <tr>
+                    <th style="text-align:left">Data Item</th>
+                    <th style="text-align:left">Description</th>
+                    <th style="text-align:left">Type</th>
+                    <th style="text-align:left">Example</th>
+                    <th style="text-align:left">Field Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:left">Claimant Name</td>
+                    <td style="text-align:left">Claimant&#39;s full name</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Mr Paul Newns</td>
+                    <td style="text-align:left">{client.fullName}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Age</td>
+                    <td style="text-align:left">Claimant&#39;s Age</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">45</td>
+                    <td style="text-align:left">{client.age}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The field name that inClinic recognises are the Field Names at the end, so If wanted to write the sentence:
+        </p>
+        <blockquote>
+            Mr Paul Newns, a 45 year old man arrived at the clinic in a dishevelled manner.
+        </blockquote>
+        <p>Then I would write in the document:</p>
+        <blockquote><code class="lang-text">{client.fullName}, a {client.age} year old man arrived at the clinic in a
+                dishevelled manner.
+            </code></blockquote>
+        <p>There are other things you can do to tweak the text too. You can use pipes | to format the data in some
+            cases. So if you wanted to write:</p>
+        <blockquote>
+            The appointment is on 1 February 2020 at 1:30pm.
+        </blockquote>
+        <p>Then you would write:</p>
+        <blockquote><code class="lang-text">The appointment is on {appointment.date|dateLong} at
+                {appointment.time|time12}.
+            </code></blockquote>
+        <p>Check out the data dictionary for more options.</p>
+        <h2 id="tem2-3">Filling in a word Document</h2>
+        <p>There are two places to open the dialog to fill in word templates. The first is in the client page and the
+            other is in the task page.</p>
+        <p>The process is simple. Once you have opened the dialog then:</p>
+        <ol class='ml-12'>
+            <li>First click &#39;SELECT FILES...&#39;. This will open a file dialog.</li>
+            <li>Navigate to the word file and select open.</li>
+            <li>The dialog will now show the file you selected. Now click on
+                &#39;UPLOAD&#39;.
+            </li>
+            <li>The file will automatically be downloaded with the fields filled in.
+            </li>
+        </ol>
+
+        <h1 id='tem5'>Field Dictionary</h1>
+        <h3 id="report-data-items">Report data items</h3>
+        <table class='a-list-table'>
+            <thead>
+                <tr>
+                    <th style="text-align:left">Data Item</th>
+                    <th style="text-align:left">Description</th>
+                    <th style="text-align:left">Type</th>
+                    <th style="text-align:left">Example</th>
+                    <th style="text-align:left">Field Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:left">Title</td>
+                    <td style="text-align:left">Formal title</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Mr / Mrs / Ms</td>
+                    <td style="text-align:left">{client.title}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Forename</td>
+                    <td style="text-align:left">Claimant&#39;s Given name</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Paul</td>
+                    <td style="text-align:left">{client.firstName}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Surname</td>
+                    <td style="text-align:left">Claimant&#39;s Family name</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Newns</td>
+                    <td style="text-align:left">{client.lastName}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Name</td>
+                    <td style="text-align:left">Claimant&#39;s full name</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Mr Paul Newns</td>
+                    <td style="text-align:left">{client.fullName}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Address</td>
+                    <td style="text-align:left">Claimant&#39;s home address</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">1 The Street, Town</td>
+                    <td style="text-align:left">{client.address}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Email</td>
+                    <td style="text-align:left">Claimant&#39;s Email Address</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">person@provider.com</td>
+                    <td style="text-align:left">{client.email}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Mobile</td>
+                    <td style="text-align:left">Claimants Mobile No.</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">07123456789</td>
+                    <td style="text-align:left">{client.mobile}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant DoB</td>
+                    <td style="text-align:left">Claimant&#39;s Date of Birth</td>
+                    <td style="text-align:left">Date</td>
+                    <td style="text-align:left">01/02/73</td>
+                    <td style="text-align:left">{client.dob}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Age</td>
+                    <td style="text-align:left">Claimant&#39;s Age</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">45 years</td>
+                    <td style="text-align:left">{client.age}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Sex</td>
+                    <td style="text-align:left">Sex</td>
+                    <td style="text-align:left">Code</td>
+                    <td style="text-align:left">Male / Female</td>
+                    <td style="text-align:left">{client.gender}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Occupation</td>
+                    <td style="text-align:left">Occupation</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Builder</td>
+                    <td style="text-align:left">{client.occupation}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Clinic Name</td>
+                    <td style="text-align:left">Clinic Name</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Clinic 1</td>
+                    <td style="text-align:left">{clinic.name}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Clinic City</td>
+                    <td style="text-align:left">Clinic City</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Cambridge</td>
+                    <td style="text-align:left">{clinic.city}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Clinic Address</td>
+                    <td style="text-align:left">Clinic Address / Interview address</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">1 The High Street, Town</td>
+                    <td style="text-align:left">{clinic.address}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Case Title</td>
+                    <td style="text-align:left">Case Title</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">RTA Motorcycle</td>
+                    <td style="text-align:left">{case.title}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Incident Date</td>
+                    <td style="text-align:left">Date of incident</td>
+                    <td style="text-align:left">Date</td>
+                    <td style="text-align:left">02/03/18</td>
+                    <td style="text-align:left">{case.incidentDate}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Claimant Age at incident</td>
+                    <td style="text-align:left">The Claimants Age at the incident date</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">42 Years</td>
+                    <td style="text-align:left">{case.clientAge}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Instructing Party Name</td>
+                    <td style="text-align:left">Solicitor or intermediate - payer</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">A Company</td>
+                    <td style="text-align:left">{case.ip}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Solicitor Name</td>
+                    <td style="text-align:left">Solicitor</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">A Company</td>
+                    <td style="text-align:left">{case.solicitor}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Our Ref</td>
+                    <td style="text-align:left">InClinic reference</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">KN190089</td>
+                    <td style="text-align:left">{case.ourRef}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Payer Ref</td>
+                    <td style="text-align:left">Payer/Referrer Reference</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">dd-13440/3</td>
+                    <td style="text-align:left">{case.payerRef}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Solicitor Ref</td>
+                    <td style="text-align:left">Solicitor Reference</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">SC/8783782/m</td>
+                    <td style="text-align:left">{case.solicitorRef}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Diagnosis</td>
+                    <td style="text-align:left">Claimants Diagnosis</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Phobia</td>
+                    <td style="text-align:left">{case.diagnosis}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Diagnostic Code</td>
+                    <td style="text-align:left">Claimants Diagnostic Code</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">D7K</td>
+                    <td style="text-align:left">{case.diagCode}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Diagnostic Description</td>
+                    <td style="text-align:left">Claimants Diagnosis description</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Phobia is defined...</td>
+                    <td style="text-align:left">{case.diagDesc}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Incident Description</td>
+                    <td style="text-align:left">Incident Description</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">It was a terrible...</td>
+                    <td style="text-align:left">{case.incidentDesc}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Injuries</td>
+                    <td style="text-align:left">Injuries from incident</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">broken leg</td>
+                    <td style="text-align:left">{case.injuries}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Initial GAD7</td>
+                    <td style="text-align:left">Initial GAD7 score</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">7</td>
+                    <td style="text-align:left">{case.gad7}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Initial PHQ9</td>
+                    <td style="text-align:left">Initial PHQ9 score</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">12</td>
+                    <td style="text-align:left">{case.phq9}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Initial Pain Catastrophe Scale</td>
+                    <td style="text-align:left">Initial Pain Catastrophe Scale score</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">21</td>
+                    <td style="text-align:left">{case.painCatScale}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Interview Date</td>
+                    <td style="text-align:left">Date of attended appointment</td>
+                    <td style="text-align:left">Date</td>
+                    <td style="text-align:left">04/05/19</td>
+                    <td style="text-align:left">{appointment.date}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Interview Time</td>
+                    <td style="text-align:left">Appointment Time</td>
+                    <td style="text-align:left">Time</td>
+                    <td style="text-align:left">13:30</td>
+                    <td style="text-align:left">{appointment.time}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Arrive Time</td>
+                    <td style="text-align:left">Appointment recommended arrival time</td>
+                    <td style="text-align:left">Time</td>
+                    <td style="text-align:left">13:15</td>
+                    <td style="text-align:left">{appointment.arriveTime}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Interview Duration</td>
+                    <td style="text-align:left">Appointment Duration</td>
+                    <td style="text-align:left">Minutes</td>
+                    <td style="text-align:left">45</td>
+                    <td style="text-align:left">{appointment.duration}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Age at Interview</td>
+                    <td style="text-align:left">The claimants age at the interview date</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">41 Years</td>
+                    <td style="text-align:left">{client.ageAtAppt}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">Psychologist</td>
+                    <td style="text-align:left">Report author</td>
+                    <td style="text-align:left">Text</td>
+                    <td style="text-align:left">Dr Crazy Mann</td>
+                    <td style="text-align:left">{clinician.name}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="pipes">pipes</h3>
+            <p>You can manipulate certain fields with a pipe |. A pipe sits in the the curly brackets after the field
+                name.
+                The pipe name is then added.</p>
+            <p>{fieldName|pipeName}</p>
+            <p>e.g. {case.clientAge|dateLong}</p>
+            <h4 id="strings">strings</h4>
+            <p>Manipulates a string</p>
+            <table class='a-list-table'>
+                <thead>
+                    <tr>
+                        <th style="text-align:left"></th>
+                        <th style="text-align:left">Description</th>
+                        <th style="text-align:left">example</th>
+                        <th style="text-align:left">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:left">capitalise</td>
+                        <td style="text-align:left">Changes the first character to uppercase</td>
+                        <td style="text-align:left">{client.pronouns.himher|capitalise}</td>
+                        <td style="text-align:left">Her</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 id="dates">dates</h4>
+                <p>format dates</p>
+                <table class='a-list-table'>
+                    <thead>
+                        <tr>
+                            <th style="text-align:left">Pipe</th>
+                            <th style="text-align:left">Description</th>
+                            <th style="text-align:left">example</th>
+                            <th style="text-align:left"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align:left">dateShort</td>
+                            <td style="text-align:left">This is the default format</td>
+                            <td style="text-align:left">{client.dob} or {client.dob|dateShort}</td>
+                            <td style="text-align:left">01/02/73</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:left">dateMedium</td>
+                            <td style="text-align:left">This is a short text version of the date</td>
+                            <td style="text-align:left">{client.dob|dateMedium}</td>
+                            <td style="text-align:left">1 Feb 1973</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:left">dateLong</td>
+                            <td style="text-align:left">This long text version of the date</td>
+                            <td style="text-align:left">{client.dob|dateLong}</td>
+                            <td style="text-align:left">1 February 1973</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 id="time">time</h4>
+                    <p>format time</p>
+                    <table class='a-list-table'>
+                        <thead>
+                            <tr>
+                                <th style="text-align:left">Pipe</th>
+                                <th style="text-align:left">Description</th>
+                                <th style="text-align:left">example</th>
+                                <th style="text-align:left"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left">time24</td>
+                                <td style="text-align:left">This is the default format</td>
+                                <td style="text-align:left">{appointment.time} or {appointment.time|time24}</td>
+                                <td style="text-align:left">13:30</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">time12</td>
+                                <td style="text-align:left">This is time with am/pm</td>
+                                <td style="text-align:left">{appointment.time|time12}</td>
+                                <td style="text-align:left">1:30 pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 id="generic-items">generic items</h3>
+                        <h3>Pronouns, etc.</h3>
+                        <table class='a-list-table'>
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left">Data item</th>
+                                    <th style="text-align:left">Description</th>
+                                    <th style="text-align:left">Db name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:left">his/her</td>
+                                    <td style="text-align:left">gender specific entry</td>
+                                    <td style="text-align:left">{client.pronouns.hisher}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left">him/her</td>
+                                    <td style="text-align:left"></td>
+                                    <td style="text-align:left">{client.pronouns.himher}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left">he/she</td>
+                                    <td style="text-align:left"></td>
+                                    <td style="text-align:left">{client.pronouns.heshe}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left">himself/herself</td>
+                                    <td style="text-align:left"></td>
+                                    <td style="text-align:left">{client.pronouns.himher}self</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left">parent</td>
+                                    <td style="text-align:left">father/mother</td>
+                                    <td style="text-align:left">{client.pronouns.parent}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left">report date</td>
+                                    <td style="text-align:left">today&#39;s date</td>
+                                    <td style="text-align:left">{today}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3 id="stats">Stats</h3>
+                        <table class='a-list-table'>
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left">Data Item</th>
+                                    <th style="text-align:left">Descritpion</th>
+                                    <th style="text-align:left">Db name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:left">Client DNA Total</td>
+                                    <td style="text-align:left">Clients Did Not Attend total</td>
+                                    <td style="text-align:left">{client.stats.dnaTotal}</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>

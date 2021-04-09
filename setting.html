@@ -17,8 +17,102 @@
     <div class="content js-toc-content pa4 pt-0 ml-80">
         <h1 id="overview" class='mt-3'>Overview</h1>
         <p>The settings area is for all settings in inClinic.</p>
+        <h1 id='set1'>Company</h1>
+        <p>The company settings are for the defaults of the business, the company main address and logo.</p>
+        <p>The Company settings are split into 6 areas (tabs):</p>
+        <ul class='list-disc ml-6 a-loose-list'>
+            <li><b>
+                    <div style='width:25px;float: left;'><img src='./assets/icons/building.svg' class='a-img-vsm'></div>
+                    General
+                </b>
+            </li>
+            <li><b>
+                    <div style='width:25px;float: left;'><img src='./assets/icons/address-book.svg' class='a-img-vsm'>
+                    </div>
+                    Directory
+                </b></li>
+            <li><b>
+                    <div style='width:25px;float: left;'><img src='./assets/icons/clock.svg' class='a-img-vsm'></div>
+                    Hours
+                </b></li>
+            <li><b>
+                    <div style='width:25px;float: left;'><img src='./assets/icons/folder.svg' class='a-img-vsm'></div>
+                    Documents
+                </b></li>
+            <li><b>
+                    <div style='width:25px;float: left;'><img src='./assets/icons/bullseye-pointer.svg'
+                            class='a-img-vsm'></div>
+                    Triggers
+                </b></li>
+            <li><b>
+                    <div style='width:25px;float: left;'><img src='./assets/icons/exchange.svg' class='a-img-vsm'></div>
+                    Integration
+                </b></li>
+        </ul>
+        <p>Their purposes are described below:</p>
+        <h3 id='set1-1'>
+            <div style='width:35px;float: left;'><img src='./assets/icons/building.svg' class='a-img-sm'></div>
+            General
+        </h3>
+        <p> This area covers three purposes:</p>
+        <ul class='ml-12 list-disc a-loose-list'>
+            <li>Company Name <b>[Required]</b></li>
+            <li>Company Address</li>
+            <li>Company Logo</li>
+        </ul>
+        <h3 id='set1-2'>
+            <div style='width:35px;float: left;'><img src='./assets/icons/address-book.svg' class='a-img-sm'>
+            </div>
+            Directory
+        </h3>
+        <p>This area is for company contact information. It also has the defaults for correspondence information. E.g.,
+            When sending an email the email address here will be used as the default send from address.</p>
+        <h3 id='set1-3'>
+            <div style='width:35px;float: left;'><img src='./assets/icons/clock.svg' class='a-img-sm'></div>
+            Hours
+        </h3>
+        <p>This is the default opening hours for the company. This pre-populates the venue hours entries.</p>
+        <h3 id='set1-4'>
+            <div style='width:35px;float: left;'><img src='./assets/icons/folder.svg' class='a-img-sm'></div>
+            Documents
+        </h3>
+        <p>This is the company documents.</p>
+        <h3 id='set1-5'>
+            <div style='width:35px;float: left;'><img src='./assets/icons/bullseye-pointer.svg' class='a-img-sm'>
+            </div>
+            Triggers
+        </h3>
+        <p>These are the default triggers setup for the company. Triggers are events that occur that a workflow can be
+            initiated by, creating a group of interconnected tasks.</p>
+        <p>There are two main types of trigger:</p>
+        <ul class='ml-12 list-disc a-loose-list'>
+            <li>Appointment - events that occurs with appointments</li>
+            <li>Task - events that occur in tasks</li>
+        </ul>
+        <h4>Appointment</h4>
+        <ul class='ml-12 list-disc a-loose-list'>
+            <li><b>On Create</b> is run when an appointment is created.</li>
+            <li><b>On Change</b> is run when an appointment is changed. Only runs if the date/time is changed.</li>
+            <li><b>On Attend</b> is run when an appointment status is set to attended.</li>
+            <li><b>On DNA</b> is run when an appointment status is set to Did Not Attend.</li>
+        </ul>
+        <p>These triggers will be ignored if they are set on the appointment type.</p>
+        <h4>Task</h4>
+        <ul class='ml-12 list-disc a-loose-list'>
+            <li><b>On Activate</b> is run when an appointment is created.</li>
+        </ul>
+        <h3 id='set1-6'>
+            <div style='width:35px;float: left;'><img src='./assets/icons/exchange.svg' class='a-img-sm'></div>
+            Integration
+        </h3>
+        <p>Defines the setup for third party tools. Currently only Firetext is available, which is a text messaging
+            service.</p>
+        <h1 id='set2'>Correspondence</h1>
+        <p> This area stores the headers and footers for documents and emails</p>
+        <h1 id='set2'>Users</h1>
+        <p> This area has the users details.</p>
 
-        <h1 id="set4">Case Types</h1>
+        <h1 id='set4'>Case Types</h1>
         <h2 id="set4-1">What are Case Types?</h2>
         <p>Case Types are a definition of cases, which is fundamentally a collection of appointments. You can define a
             name,
