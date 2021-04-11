@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+</head>
+
+<body class='p-3'>
+    <nav class="toc-left relative z-1 transition--300 absolute pa4 pt-6 is-position-fixed">
+        <h1 class='mt-0'>Global Features</h1>
+        <div class='text-right'><a href="javascript:history.back()"><img src='assets/icons/arrow-left.svg'
+                    class='a-img-xxs mr-2' />back</a></div>
+        <div class='toc js-toc'></div>
+    </nav>
+    <div class="content js-toc-content pa4 pt-0 ml-80">
+        <h1 id='s1' class='mt-3'>Workflows</h1>
+        <p>Workflows are a list of actions or steps that are used to create active tasks for users or automate tasks for
+            the system.</p>
+        <div class="a-info-card">
+            Workflow Templates are the superpower to creating an automated workflow in your business.
+        </div>
+        <p>Workflows are a list of actions or steps that can do various things. When a workflow is activated it will
+            create a number of chained tasks. When one task is completed the next becomes active. You can activate a
+            workflow manually or automatically from an trigger event (e.g. When an appointment is created).</p>
+
+        <p>A workflow creates tasks that can either be assigned to a user or to a bot (a piece of code that runs a task
+            automatically). Tasks can either be a normal task (e.g. Write report), a question (e.g. Do you want to
+            charge for the DNA?) or system activity (e.g. email client a standard email).</p>
+
+        <p>When a series of tasks are created then the first one is set as active. This means that this task is
+            available for the user to complete. When this task is completed then the next one in the series is then set
+            to active.</p>
+        <img src='assets/pages/global/image1.png' style='width:800px'>
+        <h2 id='s1-1'>Steps</h2>
+
+
+        <p>The steps of the task can do other things than just create a task. They can run jobs (e.g. sending an email),
+            ask questions and run other workflows. There are 4 types of workflow step:</p>
+
+
+
+        <ul class='list-disc a-loose-list mr-6'>
+            <li>
+                Task - This creates a task that can be assigned to a user or bot. It can also have system actions that
+                can run
+                when the task is completed.
+            </li>
+            <li>
+                Question - This creates a special task that asks the user (not available to bots) a Yes/No Question. The
+                result
+                will decide whether a new workflow is run to create tasks or to continue along with the same task chain
+            </li>
+            <li>
+                If...then - This is similar to above except only bots are allowed to complete, which they do on
+                activation of
+                the task. They use a system field to decide which route to take.
+            </li>
+            <li>Run Workflow - This will automatically start a new workflow to activate.</li>
+        </ul>
+        <h2 id='s1-2'>Example</h2>
+        <p>
+            To illustrate I am going to use the example of an appointment that has a status of 'Did Not Attend'(DNA).
+            When the appointment was set to DNA the clinician was asked whether they want to create the tasks from the
+            on DNA workflow.
+        </p>
+        <img src='assets/pages/global/image2.png' style='width:800px'>
+        <p>
+            The workflow has 1 step in it which creates a 'Question Task'. The Yes response activates workflow A and the
+            No response activates workflow B.
+        </p>
+        <p>
+            Clients Tasks current 1 Task:
+        </p>
+        <ol>
+            <li>Do you want to charge a DNA? [Question]</li>
+        </ol>
+        <p>
+            If the clinician responds No to the question then workflow B would be activated and the tasks would look
+            like
+            this:
+        </p>
+        <ol>
+            <li>Do you want to charge a DNA? [Question - NO] [COMPLETE]</li>
+        </ol>
+        <p>
+            If the clinician responds Yes to the question then workflow A would be activated and the new tasks would
+            look
+            like this:
+        </p>
+        <ol>
+            <li>Do you want to charge a DNA? [Question - YES] [COMPLETE]</li>
+            <li>Invoice for DNA. [Task]</li>
+        </ol>
+        <h2 id="s1-3">What is a Trigger?</h2>
+        <p>A trigger is an event that occurs. An example of this is when you create an appointment. When you click to
+            save the appointment, the event of saving an appointment has occurred. In inClinic it is described as the
+            appointment 'on create' trigger.</p>
+        <p>
+            The trigger can be used to run a workflow when it occurs. So to follow the example above, when the
+            appointment is saved it triggers the activation of the workflow that sends an email out to the client to
+            confirm the appointment.
+        </p>
+        <p>In settings, under the company section is the tab for triggers. These are the default triggers for inClinic.
+        </p>
+        <h3 id='s1-3-1'>Appointment Triggers</h3>
+        <p>
+            In settings, under the company section is the tab for triggers. These are the default triggers for inClinic
+            and can be over ridden if there are values set in the appointment type settings.
+        </p>
+        <p>There are currently four types of appointment triggers:</p>
+        <ul class='a-loose-list list-disc ml-6 mt-6 '>
+            <li><b>On Create</b> - Activated when the appointment is saved.</li>
+            <li><b>On Change</b> - When a current appointment is updated.</li>
+            <li><b>On Attend</b> - When the clinician sets the appointment status to attended.</li>
+            <li><b>On DNA</b> - When the clinician sets the appointment status to did not attend.</li>
+        </ul>
+        <h3 id='s1-3-2'>Appointment Type Triggers</h3>
+        <p>In Settings, under the appointment types, select an appointment type and then look at the triggers tab.</p>
+        <p>
+            As described above it contains appointment triggers. If these are added then they will take precedents over
+            the
+            default ones set in the company settings.
+        </p>
+        <h2 id='s1-3'>Related Links</h2>
+        <ul class='a-border-link a-list-links'>
+            <li><a href='setting.html#set5'>How to add a Workflow?</a></li>
+            <li><a href='setting.html#set1-5'>Setting global default triggers.</a></li>
+            <li><a href='setting.html#set9'>Setting appointment Type triggers.</a></li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+            tocSelector: '.js-toc',
+            contentSelector: '.js-toc-content',
+            headingSelector: 'h1, h2, h3',
+            hasInnerContainers: true,
+        });
+    </script>
+</body>
+
+</html>
