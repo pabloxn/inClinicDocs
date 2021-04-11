@@ -7,67 +7,111 @@
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+    <style>
+        .a-links-launch {
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: top 50% left 4px;
+            padding: 12px 0px 12px 40px;
+            margin: 12px 0px;
+        }
+
+        .a-link-list {
+            background-size: 18px;
+            background-image: url(./assets/icons/list-alt.svg);
+        }
+
+        .a-link-page {
+            background-size: 18px;
+            background-image: url(./assets/icons/window.svg);
+        }
+
+        .a-link-howto {
+            background-size: 18px;
+            background-image: url(./assets/icons/question.svg);
+        }
+
+        .a-link-stats {
+            background-size: 18px;
+            background-image: url(./assets/icons/analytics.svg);
+        }
+
+        .a-link-sets {
+            background-size: 18px;
+            background-image: url(./assets/icons/cogs.svg);
+        }
+
+        .a-link-info {
+            background-size: 10px;
+            background-image: url(./assets/icons/info.svg);
+        }
+    </style>
 </head>
 
 <body class='p-10'>
     <p> This is help documentation for inClinic.</p>
     <div class="grid grid-container--fill">
 
-        <div class="flex flex-col bg-gray-100 p-5 space-y-4 rounded-xl w-56">
-            <a class='bg-gray-300 rounded-md p-3 text-center' href='./clinic.html'><img
-                    src='assets/icons/clipboard-list-check.svg' class='float-left a-img-sm'>CLINIC</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./clinic.html#list'>Appointment List</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./clinic.html#page'>Appointment Page</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./clinic.html#hwt'>How to...</a>
-        </div>
+        <ul class="flex flex-col p-5 space-y-4 w-64">
+            <li>
+                <a class='p-1 font-bold flex flex-row' href='./clinic.html'>
+                    <div style='width:35px;'><img src='./assets/icons/clipboard-list-check.svg' class='a-img-sm'>
+                    </div>
+                    <div class="pt-1 ">CLINIC</div>
+                </a>
+            </li>
+            <li><a class='a-links-launch a-link-list' href='./clinic.html#list'>Appointment List</a></li>
+            <li><a class='a-links-launch a-link-page' href='./clinic.html#page'>Appointment Page</a></li>
+            <li><a class='a-links-launch a-link-howto' href='./clinic.html#hwt'>How to...</a></li>
+        </ul>
 
-        <div class="flex flex-col bg-gray-100 p-5 space-y-4 rounded-xl w-56">
-            <a class='bg-gray-300 rounded-md p-3 text-center' href='./diary.html'><img
-                    src='assets/icons/calendar-day.svg' class='float-left a-img-sm'>DIARY</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./diary.html#page'>Page</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./diary.html#hwt'>How to...</a>
-        </div>
-        <div class="flex flex-col bg-gray-100 p-5 space-y-4 rounded-xl w-56">
-            <a class='bg-gray-300 rounded-md p-3 text-center' href='./client.html'><img src='assets/icons/user.svg'
-                    class='float-left a-img-sm'>CLIENTS</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./client.html#list'>List</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./client.html#page'>Page</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./client.html#hwt'>How to...</a>
-        </div>
-        <div class="flex flex-col bg-gray-100 p-5 space-y-4 rounded-xl w-56">
-            <a class='bg-gray-300 rounded-md p-3 text-center' href='./contact.html'><img
-                    src='assets/icons/address-book.svg' class='float-left a-img-sm'>CONTACTS</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./contact.html#list'>List</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./contact.html#page'>Page</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./contact.html#stats'>Stats</a>
-        </div>
-        <div class="flex flex-col bg-gray-100 p-5 space-y-4 rounded-xl w-56">
-            <a class='bg-gray-300 rounded-md p-3 text-center' href='./venue.html'><img
-                    src='assets/icons/map-marked-alt.svg' class='float-left a-img-sm'>VENUES</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./venue.html#list'>List</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./venue.html#stats'>Stats</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./venue.html#hwt'>How to...</a>
-        </div>
-        <div class="flex flex-col bg-gray-100 p-5 space-y-4 rounded-xl w-56">
-            <a class='bg-gray-300 rounded-md p-3 text-center' href='./task.html'><img src='assets/icons/tasks.svg'
-                    class='float-left a-img-sm'>TASKS</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./task.html#list'>List</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./task.html#page'>Page</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./task.html#hwt'>How to...</a>
-        </div>
-        <div class="flex flex-col bg-gray-100 p-5 space-y-4 rounded-xl w-56">
-            <a class='bg-gray-300 rounded-md p-3 text-center' href='./setting.html'><img src='assets/icons/cogs.svg'
-                    class='float-left a-img-sm'>SETTINGS</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./setting.html#set1'>Company</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./setting.html#set2'>Correspondence</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./setting.html#set3'>More...</a>
-        </div>
-        <div class="flex flex-col bg-gray-100 p-5 space-y-4 rounded-xl w-56">
-            <a class='bg-gray-300 rounded-md p-3 text-center' href='./template.html'><img src='assets/icons/cogs.svg'
-                    class='float-left a-img-sm'>TEMPLATES</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./template.html#tem1'>Overview</a>
-            <a class='bg-gray-200 rounded-md p-3 text-center' href='./template.html#tem2'>Data Dictionary</a>
-        </div>
+        <ul class="flex flex-col p-5 space-y-4 w-64">
+            <li><a class='p-1 font-bold flex flex-row' href='./diary.html'><img src='assets/icons/calendar-day.svg'
+                        class='float-left a-img-sm mr-5'>DIARY</a></li>
+            <li><a class='a-links-launch a-link-page' href='./diary.html#page'>Page</a></li>
+            <li><a class='a-links-launch a-link-howto' href='./diary.html#hwt'>How to...</a></li>
+        </ul>
+        <ul class="flex flex-col p-5 space-y-4 w-64">
+            <li><a class='  p-3 font-bold ' href='./client.html'><img src='assets/icons/user.svg'
+                        class='float-left a-img-sm mr-5'>CLIENTS</a></li>
+            <li><a class='a-links-launch a-link-list' href='./client.html#list'>List</a></li>
+            <li><a class='a-links-launch a-link-page' href='./client.html#page'>Page</a></li>
+            <li><a class='a-links-launch a-link-howto' href='./client.html#hwt'>How to...</a></li>
+        </ul>
+        <ul class="flex flex-col p-5 space-y-4 w-64">
+            <li> <a class='  p-3 font-bold ' href='./contact.html'><img src='assets/icons/address-book.svg'
+                        class='float-left a-img-sm mr-5'>CONTACTS</a></li>
+            <li><a class='a-links-launch a-link-list' href='./contact.html#list'>List</a></li>
+            <li><a class='a-links-launch a-link-page' href='./contact.html#page'>Page</a></li>
+            <li><a class='a-links-launch a-link-stats' href='./contact.html#stats'>Stats</a></li>
+        </ul>
+        <ul class="flex flex-col p-5 space-y-4 w-64">
+            <li> <a class='  p-3 font-bold ' href='./venue.html'><img src='assets/icons/map-marked-alt.svg'
+                        class='float-left a-img-sm mr-5'>VENUES</a></li>
+            <li><a class='a-links-launch a-link-list' href='./venue.html#list'>List</a></li>
+            <li><a class='a-links-launch a-link-stats' href='./venue.html#stats'>Stats</a></li>
+            <li><a class='a-links-launch a-link-howto' href='./venue.html#hwt'>How to...</a></li>
+        </ul>
+        <ul class="flex flex-col p-5 space-y-4 w-64">
+            <li><a class='  p-3 font-bold ' href='./task.html'><img src='assets/icons/tasks.svg'
+                        class='float-left a-img-sm mr-5'>TASKS</a></li>
+            <li><a class='a-links-launch a-link-list' href='./task.html#list'>List</a></li>
+            <li><a class='a-links-launch a-link-page' href='./task.html#page'>Page</a></li>
+            <li><a class='a-links-launch a-link-howto' href='./task.html#hwt'>How to...</a></li>
+        </ul>
+        <ul class="flex flex-col p-5 space-y-4 w-64">
+            <li><a class='  p-3 font-bold ' href='./setting.html'><img src='assets/icons/cogs.svg'
+                        class='float-left a-img-sm mr-5'>SETTINGS</a></li>
+            <li><a class='a-links-launch a-link-sets' href='./setting.html#set1'>Company</a></li>
+            <li><a class='a-links-launch a-link-sets' href='./setting.html#set2'>Correspondence</a></li>
+            <li><a class='a-links-launch a-link-sets' href='./setting.html#set3'>More...</a></li>
+        </ul>
+        <ul class="flex flex-col p-5 space-y-4 w-64">
+            <li><a class='  p-3 font-bold ' href='./template.html'><img src='assets/icons/info.svg'
+                        class='float-left a-img-sm mr-5'>TEMPLATES</a></li>
+            <li><a class='a-links-launch a-link-info' href='./template.html#tem1'>Overview</a></li>
+            <li><a class='a-links-launch a-link-info' href='./template.html#tem2'>Data Dictionary</a></li>
+        </ul>
     </div>
 </body>
 

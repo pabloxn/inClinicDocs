@@ -12,6 +12,11 @@ body {
   display: inline !important;
 }
 
+.a-img-xxs {
+  height: 14px;
+  display: inline !important;
+}
+
 .a-img-md {
   height: 50px;
   display: inline !important;

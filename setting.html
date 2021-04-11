@@ -12,6 +12,8 @@
 <body class='p-3'>
     <nav class="toc-left relative z-1 transition--300 absolute pa4 pt-6 is-position-fixed">
         <h1 class='mt-0'>Settings</h1>
+        <div class='text-right'><a href="javascript:history.back()"><img src='assets/icons/arrow-left.svg'
+                    class='a-img-xxs mr-2' />back</a></div>
         <div class='toc js-toc'></div>
     </nav>
     <div class="content js-toc-content pa4 pt-0 ml-80">
@@ -256,6 +258,60 @@
             <li>Under settings choose &#39;Letter Templates&#39;</li>
             <li>Click the entry in the list that you want to edit.</li>
             <li>Follow steps 3 to 8 above.</li>
+        </ol>
+        <h1 id='set7'>SMS Templates</h1>
+        <h2 id="set7-1">What are the SMS templates?</h2>
+        <p>SMS templates are a list of templates that are used to create messages to clients either manually or via an
+            event occurring. You can assign SMS templates to activate when a appointment is created or via the SMS chat
+            sidebar. You can also set a message to arrive in the future. You will need to make sure that the FireText
+            section in <a href="#set1" class='a-link'>integrations</a> is set up to use this functionality.</p>
+        <div class='a-info-card'>SMS templates can create useful reminders and confirmations to your clients without the
+            user having to enter them.</div>
+        <h2 id="set7-2">How do I create an SMS template?</h2>
+        <ol class='list-decimal ml-6 mt-6 a-loose-list'>
+            <li>Under settings choose 'SMS Templates'</li>
+
+            <li>Click the Add button and you will the SMS Template Form.</li>
+
+            <li>You will need to give the template a name, preferably something that is meaningful to its purpose.</li>
+
+            <li><span class="a-optional">[optional]</span> If you want to send a delayed message (A message that will
+                arrive in the future) then you
+                will need to set the date anchor and date formula fields. To calculate when the message will be sent we
+                need to define when we are calculating from and how long from that point.
+                <ol class='list-decimal ml-12 a-loose-list'>
+                    <li>
+                        Select the 'Date Anchor' which defines when the calculation is going to be based from. There are
+                        two
+                        options [Start and End]. The Start will define starting the calculation from the start of an
+                        event (e.g.
+                        When an appointment was created) or the end of an event (e.g. When the appointment happened).
+                    </li>
+                    <li>
+                        Enter the formula to calculate the date. These date formulas are defined in the Date
+                        Calculations
+                        section. (e.g. +1D with start would send a message a day after the appointment was created. or
+                        -5D with
+                        end would send a message 5 days before the appointment).
+                    </li>
+                </ol>
+            </li>
+            <li> Then you can create the message with the addition of being able to add place holders for record
+                details.
+                To do this click 'Add Field' and then select the field you want. The fields menu will insert field
+                holders at the cursor. These fields will be filled in when the message is created from the template. See
+                Data Dictionary for further guidance. If you are familiar with 'Mail Merge' in Microsoft Office Word
+                then it performs a similar task.
+            </li>
+
+            <li>Once you have added the required data then click the Save button and you will be taken back to the list.
+            </li>
+        </ol>
+        <h2 id="set7-3">How do I edit an SMS Template?</h2>
+        <ol class='list-decimal ml-6 mt-6 a-loose-list'>
+            <li>Under settings choose 'SMS Templates'</li>
+            <li>Click the entry in the list that you want to edit.</li>
+            <li>Follow steps 3 to 6 above.</li>
         </ol>
         <h1 id="set9">Workflow Templates</h1>
         <h2 id="set9-1">What are the workflow templates?</h2>

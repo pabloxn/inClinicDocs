@@ -80,6 +80,8 @@
       right: 0;
       padding: 0 15px;
       border: 0;
+      border-bottom: 5px;
+      border-color: rgba(229, 231, 235, 1);
       outline: none;
       background-color: rgba(229, 231, 235, 1);
       color: #000;
@@ -87,7 +89,8 @@
     }
 
     .greedy-nav button:hover {
-      background-color: rgba(209, 213, 219, 1);
+      /* background-color: rgba(209, 213, 219, 1); */
+      border-color: rgba(209, 213, 219, 1);
     }
 
     .greedy-nav button:hover::after {
@@ -176,52 +179,53 @@
 
 
     <ul class='visible-links '>
-      <li class='pt-3 cursor-pointer transition hover:bg-gray-200 ' style='height:70px;' onclick="go('./launch.html')">
+      <li class='pt-3 pt-3 cursor-pointer border-b-4 border-gray-100 transition hover:border-gray-400'
+        style='height:70px;' onclick="go('./launch.html')">
         <a class='  p-2   pl-4 pr-4 ' style='min-width: 60px'><img src='assets/icons/home.svg' width='25'
             class='inline-block mb-1'></a></li>
-      <li class='hover:bg-gray-200 pt-3 cursor-pointer'>
-        <a class='  p-2 transition  pl-4 pr-4 ' onclick="go('./clinic.html')" style='min-width: 130px;'>
-          <img src='assets/icons/clipboard-list-check.svg' width='18' class='inline-block mb-1'>
+      <li class=' pt-3 cursor-pointer border-b-4 border-gray-100 transition hover:border-gray-400'>
+        <a class='  p-2  pl-4 pr-4 ' onclick="go('./clinic.html')" style='min-width: 130px;'>
+          <img src='assets/icons/clipboard-list-check.svg' width='16' class='inline-block mb-1'>
           <span class='ml-3 inline-block '>CLINIC</span></a></li>
-      <li class='hover:bg-gray-200 pt-3 cursor-pointer'>
+      <li class='pt-3 cursor-pointer border-b-4 border-gray-100 transition hover:border-gray-400'>
         <a class='  p-2 transition  pl-4 pr-4 ' onclick="go('./diary.html')" style='min-width: 130px;'>
-          <img src='assets/icons/calendar-day.svg' width='20' class='inline-block mb-1'>
+          <img src='assets/icons/calendar-day.svg' width='18' class='inline-block mb-1'>
           <span class='ml-3 inline-block '>DIARY</span>
         </a>
       </li>
-      <li class='hover:bg-gray-200 pt-3 cursor-pointer'>
+      <li class='pt-3 cursor-pointer border-b-4 border-gray-100 transition hover:border-gray-400'>
         <a class='  p-2 transition  pl-4 pr-4 ' onclick="go('./client.html')" style='min-width: 150px;'>
-          <img src='assets/icons/user.svg' width='20' class='inline-block mb-1'>
+          <img src='assets/icons/user.svg' width='18' class='inline-block mb-1'>
           <span class='ml-3 inline-block'>CLIENTS</span>
         </a>
       </li>
-      <li class='hover:bg-gray-200 pt-3 cursor-pointer'>
+      <li class='pt-3 cursor-pointer border-b-4 border-gray-100 transition hover:border-gray-400'>
         <a class='  p-2 transition  pl-4 pr-4 ' onclick="go('./contact.html')" style='min-width: 170px;'>
-          <img src='assets/icons/address-book.svg' width='18' class='inline-block mb-1'>
+          <img src='assets/icons/address-book.svg' width='16' class='inline-block mb-1'>
           <span class='ml-3 inline-block'>CONTACTS</span>
         </a>
       </li>
-      <li class='hover:bg-gray-200 pt-3 cursor-pointer'>
+      <li class='pt-3 cursor-pointer border-b-4 border-gray-100 transition hover:border-gray-400'>
         <a class='  p-2 transition  pl-4 pr-4 ' onclick="go('./venue.html')" style='min-width: 150px;'>
-          <img src='assets/icons/map-marked-alt.svg' width='20' class='inline-block mb-1'>
+          <img src='assets/icons/map-marked-alt.svg' width='18' class='inline-block mb-1'>
           <span class='ml-3 inline-block'>VENUES</span>
         </a>
       </li>
-      <li class='hover:bg-gray-200 pt-3 cursor-pointer'>
-        <a class='  p-2 transition  pl-4 pr-4 ' onclick="go('./task.html')" style='min-width: 130px;'>
-          <img src='assets/icons/tasks.svg' width='20' class='inline-block mb-1'>
+      <li class='pt-3 cursor-pointer border-b-4 border-gray-100 transition hover:border-gray-400'>
+        <a class='   transition  pl-4 pr-4 ' onclick="go('./task.html')" style='min-width: 130px;'>
+          <img src='assets/icons/tasks.svg' width='18' class='inline-block mb-1'>
           <span class='ml-3 inline-block'>TASKS</span>
         </a>
       </li>
-      <li class='hover:bg-gray-200 pt-3 cursor-pointer'>
+      <li class='pt-3 cursor-pointer border-b-4 border-gray-100 transition hover:border-gray-400'>
         <a class='  p-2 transition  pl-4 pr-4 ' onclick="go('./setting.html')" style='min-width: 170px;'>
-          <img src='assets/icons/cogs.svg' width='20' class='inline-block mb-1'>
+          <img src='assets/icons/cogs.svg' width='18' class='inline-block mb-1'>
           <span class='ml-3 inline-block'>SETTINGS</span>
         </a>
       </li>
-      <li class='hover:bg-gray-200'>
+      <li class='pt-3 cursor-pointer border-b-4 border-gray-100 transition hover:border-gray-400'>
         <a class='  p-2 transition  pl-4 pr-4 ' onclick="go('./template.html')" style='min-width: 170px;'>
-          <img src='assets/icons/cogs.svg' width='20' class='inline-block mb-1'>
+          <img src='assets/icons/cogs.svg' width='18' class='inline-block mb-1'>
           <span class='ml-3 inline-block'>TEMPLATES</span>
         </a>
       </li>
